@@ -1,0 +1,4 @@
+* text=auto !eol
+/LICENSE.txt -text
+/NOTICE.txt -text
+/pom.xml -text
