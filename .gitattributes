@@ -2,3 +2,9 @@
 /LICENSE.txt -text
 /NOTICE.txt -text
 /pom.xml -text
+src/main/java/org/onehippo/forge/iframeprspectiv/GenericIFramePerspective.java -text
+src/main/resources/org/onehippo/forge/iframeprspectiv/GenericIFramePerspective.html -text
+src/main/resources/org/onehippo/forge/iframeprspectiv/GenericIFramePerspective.properties -text
+src/main/resources/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective-32.png -text
+src/main/resources/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective.css -text
+src/main/resources/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective.js -text

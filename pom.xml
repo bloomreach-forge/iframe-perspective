@@ -34,6 +34,7 @@
     
     <lib.junit.version>4.8.2</lib.junit.version>
     <lib.slf4j.version>1.6.1</lib.slf4j.version>
+    <lib.wicket.version>1.4.17</lib.wicket.version>
 
     <plugin.checkstyle.version>2.6</plugin.checkstyle.version>
     <plugin.cobertura.version>2.4</plugin.cobertura.version>
@@ -81,8 +82,8 @@
   </developers>
 
   <scm>
-    <connection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/trunk</connection>
-    <developerConnection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/trunk</developerConnection>
+    <connection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</connection>
+    <developerConnection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</developerConnection>
     <url>http://forge.onehippo.org/svn/iframeprspectiv/trunk</url>
   </scm>
 
@@ -117,18 +118,21 @@
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-cms-plugins</artifactId>
       <version>${cms.version}</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-cms-editor-frontend</artifactId>
       <version>${cms.version}</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.apache.wicket</groupId>
       <artifactId>wicket</artifactId>
-      <version>${wicket.version}</version>
+      <version>${lib.wicket.version}</version>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -282,7 +286,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>${plugin.release.version}</version>
         <configuration>
-          <tagBase>http://forge.onehippo.org/svn/iframeprspectiv/tags</tagBase>
+          <tagBase>http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/tags</tagBase>
         </configuration>
       </plugin>
       <plugin>
