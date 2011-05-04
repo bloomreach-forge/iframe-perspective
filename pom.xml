@@ -20,7 +20,7 @@
   <description>IFrame Perspective Plugin</description>
   <groupId>org.onehippo.forge.iframeprspectiv</groupId>
   <artifactId>iframeprspectiv</artifactId>
-  <version>1.01.00</version>
+  <version>1.01.01-SNAPSHOT</version>
   <packaging>jar</packaging>
   <url>http://iframeprspectiv.forge.onehippo.org/</url>
 
@@ -81,9 +81,9 @@
   </developers>
 
   <scm>
-    <connection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/tags/iframeprspectiv-1.01.00</connection>
-    <developerConnection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/tags/iframeprspectiv-1.01.00</developerConnection>
-    <url>http://forge.onehippo.org/svn/iframeprspectiv/tags/iframeprspectiv-1.01.00</url>
+    <connection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</connection>
+    <developerConnection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</developerConnection>
+    <url>http://forge.onehippo.org/svn/iframeprspectiv/trunk</url>
   </scm>
 
   <issueManagement>
