@@ -8,3 +8,9 @@ src/main/resources/org/onehippo/forge/iframeprspectiv/GenericIFramePerspective.p
 src/main/resources/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective-32.png -text
 src/main/resources/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective.css -text
 src/main/resources/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective.js -text
+src/site/checkstyle.xml -text
+src/site/site.xml -text
+src/site/xdoc/build-from-source.xml -text
+src/site/xdoc/index.xml -text
+src/site/xdoc/install.xml -text
+src/site/xdoc/release-notes.xml -text

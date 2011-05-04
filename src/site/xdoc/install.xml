@@ -1,0 +1,163 @@
+<?xml version="1.0"?><!--
+    Copyright 2011 Hippo Licensed under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+    applicable law or agreed to in writing, software distributed under
+    the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+    OR CONDITIONS OF ANY KIND, either express or implied. See the
+    License for the specific language governing permissions and
+    limitations under the License.
+  --><!DOCTYPE document PUBLIC "-//Apache Software Foundation//DTD XDOC 1.0//EN"
+  "http://maven.apache.org/dtd/xdoc_1_0.dtd">
+<document>
+  <properties>
+    <title>How to install the IFrame Perspective Plugin</title>
+  </properties>
+  <body>
+    <section name="How to install the IFrame Perspective Plugin">
+      <subsection name="Prerequisites">
+        <p>
+          These instruction assumes that you have maven 2 or 3 based build for your site.
+        </p>
+      </subsection>
+      <subsection name="Maven 2 repository">
+        <p>Add this repository to your root pom.xml:</p>
+        <source><![CDATA[
+    <repository>
+      <id>hippo-maven2-forge</id>
+      <name>Hippo Maven 2 Forge</name>
+      <url>http://maven.onehippo.com/maven2-forge</url>
+    </repository>]]></source>
+      </subsection>
+
+      <subsection name="Specifying the dependency">
+        <p>Add this dependency to the pom.xml:</p>
+        <source><![CDATA[
+  <dependency>
+    <groupId>org.onehippo.forge.iframeprspectiv</groupId>
+    <artifactId>iframeprspectiv</artifactId>
+    <version>1.01.00</version>
+  </dependency>]]></source>
+      </subsection>
+
+      <subsection name="Add the plugin configuration to the repository">
+        <p>Add the plugin configuration to the repository like the following example:</p>
+        <p>[hippoecm-extension.xml]</p>
+        <source><![CDATA[
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hippo:initialize">
+  <sv:node sv:name="iframe-perspective">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>10210</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>iframe-perspective-example.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hippo:configuration/hippo:frontend/cms/cms-static</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
+        ]]></source>
+        <p>[iframe-perspective-example.xml]</p>
+        <source><![CDATA[
+<sv:node sv:name="genericIFramePerspective"
+  xmlns:frontend="http://www.onehippo.org/jcr/frontend/nt/2.0" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>frontend:plugin</sv:value>
+  </sv:property>
+  <sv:property sv:name="perspective.title" sv:type="String">
+    <sv:value>iframe-perspective-title</sv:value>
+  </sv:property>
+  <sv:property sv:name="plugin.class" sv:type="String">
+    <sv:value>org.onehippo.forge.iframeprspectiv.GenericIFramePerspective</sv:value>
+  </sv:property>
+  <sv:property sv:name="translator.id" sv:type="String">
+    <sv:value>service.translator.config</sv:value>
+  </sv:property>
+  <sv:property sv:name="wicket.id" sv:type="String">
+    <sv:value>service.tab</sv:value>
+  </sv:property>
+  <sv:property sv:name="iframe.src" sv:type="String">
+    <sv:value>http://www.onehippo.org</sv:value>
+  </sv:property>
+  <sv:node sv:name="layout.wireframe">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="center" sv:type="String">
+      <sv:value>id=generic-iframe-perspective-center,body=generic-iframe-perspective-center-body,scroll=true</sv:value>
+    </sv:property>
+    <sv:property sv:name="linked.with.parent" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="root.id" sv:type="String">
+      <sv:value>generic-iframe-perspective-wrapper</sv:value>
+    </sv:property>
+    <sv:property sv:name="top" sv:type="String">
+      <sv:value>id=generic-iframe-perspective-top,body=generic-iframe-perspective-top-body,height=35</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
+        ]]></source>
+      </subsection>
+      <subsection name="Plugin Configuration Details">
+        <p>You can configure the followings:</p>
+        <table>
+          <tr>
+            <th>Property</th>
+            <th>Example value</th>
+            <th>Default value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>perspective.title</td>
+            <td>My Application IFrame</td>
+            <td>Generic IFrame Panel</td>
+            <td>Title for this perspective</td>
+          </tr>
+          <tr>
+            <td>iframe.src</td>
+            <td>http://www.onehippo.org</td>
+            <td></td>
+            <td>The initial source of the IFrame element</td>
+          </tr>
+          <tr>
+            <td>icon-prefix</td>
+            <td>my-iframe-perspective-</td>
+            <td>generic-iframe-perspective-</td>
+            <td>
+              The prefix of the icon for this perspective.
+              For example, if the prefix of the icon is 'generic-iframe-perspective-' and the suffix is '.png', then
+              'classpath:/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective-32.png' resource will be used for the perspective icon.
+            </td>
+          </tr>
+          <tr>
+            <td>icon-suffix</td>
+            <td>.gif</td>
+            <td>.png</td>
+            <td>
+              The suffix of the icon for this perspective.
+              For example, if the prefix of the icon is 'generic-iframe-perspective-' and the suffix is '.png', then
+              'classpath:/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective-32.png' resource will be used for the perspective icon.
+            </td>
+          </tr>
+          <tr>
+            <td>iframe.*</td>
+            <td></td>
+            <td></td>
+            <td>
+              If there is any property with name starting with 'iframe.', then the remaining part after 'iframe.' will be added
+              as an additional attribute of the iframe element.
+              For example, if you add 'iframe.name' with value, 'myiframe', then the iframe will have 'name="myiframe"' attribute.
+            </td>
+          </tr>
+        </table>
+      </subsection>
+    </section>
+  </body>
+</document>
