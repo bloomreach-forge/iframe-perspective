@@ -17,9 +17,16 @@
   </properties>
   <body>
     <section name="Release Notes">
+      <subsection name="1.02.00">
+        <ul>
+          <li>Supports IFrame Resizing when the window resizes.</li>
+          <li>This version is compatible with Hippo CMS 2.21.06 or later.</li>
+        </ul>
+      </subsection>
       <subsection name="1.01.00">
         <ul>
           <li>Initial release.</li>
+          <li>This version is compatible with Hippo CMS 2.19.xx or [2.21.00, 2.21.06).</li>
         </ul>
       </subsection>
     </section>

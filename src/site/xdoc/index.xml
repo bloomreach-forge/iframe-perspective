@@ -24,7 +24,9 @@
       </subsection>
       <subsection name="Project status">
         <p>
-          The latest version of the HttpsFilter is 1.01.00.
+          The latest version of the HttpsFilter is 1.02.00 and 1.01.00.
+          v1.02.00 is compatible with Hippo CMS 2.21.06 or later,
+          while v1.01.00 is compatible with Hippo CMS 2.19.xx or [2.21.00, 2.21.06).
         </p>
         <p>
           See the
