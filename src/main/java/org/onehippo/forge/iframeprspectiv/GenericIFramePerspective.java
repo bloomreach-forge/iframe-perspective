@@ -47,8 +47,8 @@ public class GenericIFramePerspective extends Perspective {
         add(CSSPackageResource.getHeaderContribution(getClass(), "generic-iframe-perspective.css"));
         add(JavascriptPackageResource.getHeaderContribution(getClass(), "generic-iframe-perspective.js"));
         
-        final WebMarkupContainer iframeContainer = new WebMarkupContainer("generic-perspective-iframe");
-        iframeContainer.setOutputMarkupId(true);
+        final WebMarkupContainer iframe = new WebMarkupContainer("generic-perspective-iframe");
+        iframe.setOutputMarkupId(true);
         
         iconPrefix = config.getString("icon-prefix", DEFAULT_ICON_PREFIX);
         iconSuffix = config.getString("icon-suffix", DEFAULT_ICON_SUFFIX);
@@ -59,19 +59,19 @@ public class GenericIFramePerspective extends Perspective {
                 String attrValue = config.getString(key, null);
                 
                 if (attrValue != null) {
-                    iframeContainer.add(new SimpleAttributeModifier(attrName, attrValue));
+                    iframe.add(new SimpleAttributeModifier(attrName, attrValue));
                 }
             }
         }
         
-        add(iframeContainer);
+        add(iframe);
         
         add(new AbstractBehavior() {
             private static final long serialVersionUID = 1L;
 
             @Override
             public void renderHead(IHeaderResponse response) {
-                String js = "GenericIFramePerspective.showIFrame(\"" + iframeContainer.getMarkupId() + "\");";
+                String js = "GenericIFramePerspective.showIFrame(\"" + iframe.getMarkupId() + "\");";
                 response.renderOnDomReadyJavascript(js);
                 super.renderHead(response); 
             } 

@@ -14,20 +14,8 @@
  *  limitations under the License.
  */
 
-iframe.generic-iframe-perspective-visible {
-  visibility: visible;
-  position: absolute;
-  left: 48px;
-  top: 76px;
+iframe.generic-iframe-perspective {
   border: medium none;
-  z-index: 999;
-}
-
-iframe.generic-iframe-perspective-hidden {
-  visibility: hidden;
-  position: absolute;
-  left: 48px;
-  top: 76px;
-  border: medium none;
-  z-index: -999;
+  margin-top: 27px;
+  width: 100%;
 }

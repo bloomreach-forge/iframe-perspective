@@ -20,7 +20,7 @@
   <description>IFrame Perspective Plugin</description>
   <groupId>org.onehippo.forge.iframeprspectiv</groupId>
   <artifactId>iframeprspectiv</artifactId>
-  <version>1.01.01-SNAPSHOT</version>
+  <version>1.02.00-SNAPSHOT</version>
   <packaging>jar</packaging>
   <url>http://iframeprspectiv.forge.onehippo.org/</url>
 
@@ -29,7 +29,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.javaVersion>1.5</project.build.javaVersion>
     
-    <cms.version>2.19.03</cms.version>
+    <hippo.cms.version>2.21.01</hippo.cms.version>
     
     <lib.junit.version>4.8.2</lib.junit.version>
     <lib.slf4j.version>1.6.1</lib.slf4j.version>
@@ -81,8 +81,8 @@
   </developers>
 
   <scm>
-    <connection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</connection>
-    <developerConnection>scm:svn:http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</developerConnection>
+    <connection>scm:svn:https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</connection>
+    <developerConnection>scm:svn:https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</developerConnection>
     <url>http://forge.onehippo.org/svn/iframeprspectiv/trunk</url>
   </scm>
 
@@ -99,7 +99,7 @@
     <repository>
       <uniqueVersion>false</uniqueVersion>
       <id>iframeprspectiv-maven-repo</id>
-      <url>svn:http://forge.onehippo.org/svn/iframeprspectiv/maven2/</url>
+      <url>svn:https://forge.onehippo.org/svn/iframeprspectiv/maven2/</url>
     </repository>
   </distributionManagement>
 
@@ -116,14 +116,14 @@
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-cms-plugins</artifactId>
-      <version>${cms.version}</version>
+      <version>${hippo.cms.version}</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-cms-editor-frontend</artifactId>
-      <version>${cms.version}</version>
+      <version>${hippo.cms.version}</version>
       <scope>provided</scope>
     </dependency>
 
@@ -285,7 +285,7 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>${plugin.release.version}</version>
         <configuration>
-          <tagBase>http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/tags</tagBase>
+          <tagBase>https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/tags</tagBase>
         </configuration>
       </plugin>
       <plugin>
