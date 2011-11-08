@@ -22,6 +22,21 @@
           The IFrame Perspective Plugin privides an IFrame based CMS Perspective Plugin, with keeping the navigation states of the IFrame element.
         </p>
       </subsection>
+      <subsection name="Running a demo">
+        <p>
+          You can check out the demo project and run it like the following:
+        </p>
+        <source><![CDATA[
+$ svn checkout https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv-demo/trunk iframeprspectiv-demo
+$ cd iframeprspectiv-demo
+$ mvn install
+$ mvn -P cargo.run
+        ]]></source>
+        <p>
+          And, visit <a href="http://localhost:8080/cms" target="_blank">http://localhost:8080/cms</a>.
+          You can click the last perspective tab to switch to the IFrame Perspective.
+        </p>
+      </subsection>
       <subsection name="Project status">
         <p>
           The latest version is 1.02.00 and 1.01.00.
