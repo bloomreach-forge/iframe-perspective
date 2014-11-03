@@ -28,12 +28,11 @@
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.javaVersion>1.5</project.build.javaVersion>
-    
-    <hippo.cms.version>2.21.01</hippo.cms.version>
-    
+
+    <hippo.cms.version>2.26.07</hippo.cms.version>
+
     <lib.junit.version>4.8.2</lib.junit.version>
-    <lib.slf4j.version>1.6.1</lib.slf4j.version>
-    <lib.wicket.version>1.4.17</lib.wicket.version>
+    <lib.slf4j.version>1.7.6</lib.slf4j.version>
 
     <plugin.checkstyle.version>2.6</plugin.checkstyle.version>
     <plugin.cobertura.version>2.4</plugin.cobertura.version>
@@ -76,7 +75,7 @@
         <role>Project Lead</role>
         <role>Java Developer</role>
       </roles>
-      <timezone>+1</timezone>
+      <timezone>-5</timezone>
     </developer>
   </developers>
 
@@ -115,22 +114,8 @@
 
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-cms-plugins</artifactId>
+      <artifactId>hippo-cms-api</artifactId>
       <version>${hippo.cms.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.onehippo.cms7</groupId>
-      <artifactId>hippo-cms-editor-frontend</artifactId>
-      <version>${hippo.cms.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.wicket</groupId>
-      <artifactId>wicket</artifactId>
-      <version>${lib.wicket.version}</version>
       <scope>provided</scope>
     </dependency>
 
