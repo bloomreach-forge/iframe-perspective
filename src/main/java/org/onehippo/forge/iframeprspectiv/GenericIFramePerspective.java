@@ -1,5 +1,5 @@
 /*
- *  Copyright 2008 Hippo.
+ *  Copyright 2008-2014 Hippo.
  * 
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -15,12 +15,16 @@
  */
 package org.onehippo.forge.iframeprspectiv;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.markup.head.OnDomReadyHeaderItem;
 import org.apache.wicket.markup.html.WebMarkupContainer;
+import org.apache.wicket.request.Response;
+import org.apache.wicket.request.cycle.RequestCycle;
+import org.apache.wicket.request.http.WebResponse;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.JavaScriptResourceReference;
 import org.apache.wicket.request.resource.PackageResourceReference;
@@ -30,8 +34,12 @@ import org.hippoecm.frontend.plugin.IPluginContext;
 import org.hippoecm.frontend.plugin.config.IPluginConfig;
 import org.hippoecm.frontend.plugins.standards.perspective.Perspective;
 import org.hippoecm.frontend.service.IconSize;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class GenericIFramePerspective extends Perspective {
+
+    private static Logger log = LoggerFactory.getLogger(GenericIFramePerspective.class);
 
     private static final String DEFAULT_ICON_PREFIX = "generic-iframe-perspective-";
     private static final String DEFAULT_ICON_SUFFIX = ".png";
@@ -46,6 +54,26 @@ public class GenericIFramePerspective extends Perspective {
     private String iconPrefix;
     private String iconSuffix;
 
+    /**
+     * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
+     */
+    private String xFrameOptions;
+
+    /**
+     * @see http://caniuse.com/#feat=contentsecuritypolicy
+     */
+    private String contentSecurityPolicy;
+
+    /**
+     * @see http://caniuse.com/#feat=contentsecuritypolicy
+     */
+    private String xContentSecurityPolicy;
+
+    /**
+     * @see http://caniuse.com/#feat=contentsecuritypolicy
+     */
+    private String xWebkitCSP;
+
     private final WebMarkupContainer iframe;
 
     public GenericIFramePerspective(IPluginContext context, IPluginConfig config) {
@@ -55,8 +83,13 @@ public class GenericIFramePerspective extends Perspective {
         iframe = new WebMarkupContainer("generic-perspective-iframe");
         iframe.setOutputMarkupId(true);
 
-        iconPrefix = config.getString("icon-prefix", DEFAULT_ICON_PREFIX);
-        iconSuffix = config.getString("icon-suffix", DEFAULT_ICON_SUFFIX);
+        iconPrefix = StringUtils.trim(config.getString("icon-prefix", DEFAULT_ICON_PREFIX));
+        iconSuffix = StringUtils.trim(config.getString("icon-suffix", DEFAULT_ICON_SUFFIX));
+
+        xFrameOptions = StringUtils.trim(config.getString("x-frame-options", null));
+        contentSecurityPolicy = StringUtils.trim(config.getString("content-security-policy", null));
+        xContentSecurityPolicy = StringUtils.trim(config.getString("x-content-security-policy", null));
+        xWebkitCSP = StringUtils.trim(config.getString("x-webkit-csp", null));
 
         for (String key : config.keySet()) {
             if (key.startsWith(IFRAME_ATTRIBUTE_PREFIX)) {
@@ -70,6 +103,33 @@ public class GenericIFramePerspective extends Perspective {
         }
 
         add(iframe);
+    }
+
+    @Override
+    protected void onRender() {
+        super.onRender();
+
+        Response response = RequestCycle.get().getResponse();
+
+        if (response instanceof WebResponse) {
+            if (StringUtils.isNotEmpty(xFrameOptions)) {
+                ((WebResponse) response).setHeader("X-Frame-Options", xFrameOptions);
+            }
+
+            if (StringUtils.isNotEmpty(contentSecurityPolicy)) {
+                ((WebResponse) response).setHeader("Content-Security-Policy", contentSecurityPolicy);
+            }
+
+            if (StringUtils.isNotEmpty(xContentSecurityPolicy)) {
+                ((WebResponse) response).setHeader("X-Content-Security-Policy", xContentSecurityPolicy);
+            }
+
+            if (StringUtils.isNotEmpty(xWebkitCSP)) {
+                ((WebResponse) response).setHeader("X-Webkit-CSP", xWebkitCSP);
+            }
+        } else {
+            log.error("Failed to write response headers because response is not WebResponse: {}", response);
+        }
     }
 
     @Override
