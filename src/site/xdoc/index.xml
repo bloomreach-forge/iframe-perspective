@@ -39,6 +39,41 @@ $ mvn -P cargo.run
           You can click the last perspective tab to switch to the IFrame Perspective.
         </p>
       </subsection>
+      <subsection name="Security Considerations">
+        <p>
+          By default, Hippo CMS web application doesn't allow to navigate a URL from a different origin
+          in the <strong>iframeprspectiv</strong> plugin.
+        </p>
+        <p>
+          If you want to allow some specific known sites to be navigated in the plugin,
+          then you might want to configure the following properties to set the corresponding response headers.
+        </p>
+        <p>
+          <em>Note: please refer to the <a href="install.html">Installation</a> page for details.</em>
+        </p>
+        <table>
+          <tr>
+            <th>Property Name</th>
+            <th>Corresponding HTTP Header</th>
+          </tr>
+          <tr>
+            <td>x-frame-options</td>
+            <td>X-Frame-Options</td>
+          </tr>
+          <tr>
+            <td>content-security-policy</td>
+            <td>Content-Security-Policy</td>
+          </tr>
+          <tr>
+            <td>x-content-security-policy</td>
+            <td>X-Content-Security-Policy</td>
+          </tr>
+          <tr>
+            <td>x-webkit-csp</td>
+            <td>X-Webkit-CSP</td>
+          </tr>
+        </table>
+      </subsection>
       <subsection name="Project status">
         <p>
           For the latest version of the HST Configuration Code Editor, see <a href="release-notes.html">Release Notes</a>.
