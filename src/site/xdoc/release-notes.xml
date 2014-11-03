@@ -16,7 +16,33 @@
     <title>Release Notes</title>
   </properties>
   <body>
+    <section name="Compatibility">
+      <table>
+        <tr>
+          <th>Plugin version</th>
+          <th>Hippo CMS Release version</th>
+        </tr>
+        <tr>
+          <td>1.03.xx</td>
+          <td>7.9.x</td>
+        </tr>
+        <tr>
+          <td>1.02.xx</td>
+          <td>7.7.x, 7.8.x</td>
+        </tr>
+        <tr>
+          <td>1.01.xx</td>
+          <td>7.6.x</td>
+        </tr>
+      </table>
+    </section>
     <section name="Release Notes">
+      <subsection name="1.03.00">
+        <ul>
+          <li>Upgrade to be compatible with 7.9.</li>
+          <li>Support IFrame related security headers (X-Frame-Options, Content-Security-Policy, X-Content-Security-Policy, X-Webkit-CSP).</li>
+        </ul>
+      </subsection>
       <subsection name="1.02.00">
         <ul>
           <li>Supports IFrame Resizing when the window resizes.</li>

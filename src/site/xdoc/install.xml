@@ -19,54 +19,59 @@
     <section name="How to install the IFrame Perspective Plugin">
       <subsection name="Prerequisites">
         <p>
-          These instruction assumes that you have maven 2 or 3 based build for your site.
+          These instruction assumes that you have maven 3 based build for your site.
         </p>
       </subsection>
       <subsection name="Maven 2 repository">
         <p>Add this repository to your root pom.xml:</p>
+        <div class="brush: xml">
         <source><![CDATA[
     <repository>
       <id>hippo-maven2-forge</id>
       <name>Hippo Maven 2 Forge</name>
       <url>http://maven.onehippo.com/maven2-forge</url>
     </repository>]]></source>
+        </div>
       </subsection>
 
       <subsection name="Specifying the dependency">
         <p>Add this dependency to the pom.xml:</p>
+        <div class="brush: xml">
         <source><![CDATA[
   <dependency>
     <groupId>org.onehippo.forge.iframeprspectiv</groupId>
     <artifactId>iframeprspectiv</artifactId>
-    <version>1.01.00</version>
+    <version>${forge.iframeprspectiv.version}</version>
   </dependency>]]></source>
+        </div>
       </subsection>
 
       <subsection name="Add the plugin configuration to the repository">
         <p>Add the plugin configuration to the repository like the following example:</p>
         <p>[hippoecm-extension.xml]</p>
+        <div class="brush: xml">
         <source><![CDATA[
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hippo:initialize">
-  <sv:node sv:name="iframe-perspective">
+  <sv:node sv:name="iframeprspectiv-demo-hippo-configuration-hippo-frontend-cms-cms-static-genericIFramePerspective">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>10210</sv:value>
+      <sv:value>34000.3</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>iframe-perspective-example.xml</sv:value>
+      <sv:value>configuration/frontend/cms/cms-static/genericIFramePerspective.xml</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:contentroot" sv:type="String">
       <sv:value>/hippo:configuration/hippo:frontend/cms/cms-static</sv:value>
     </sv:property>
   </sv:node>
-</sv:node>
         ]]></source>
-        <p>[iframe-perspective-example.xml]</p>
+        </div>
+        <p>[<a href="http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv-demo/trunk/bootstrap/configuration/src/main/resources/configuration/frontend/cms/cms-static/genericIFramePerspective.xml" target="_blank">genericIFramePerspective.xml</a>]</p>
+        <div class="brush: xml">
         <source><![CDATA[
-<sv:node sv:name="genericIFramePerspective"
-  xmlns:frontend="http://www.onehippo.org/jcr/frontend/nt/2.0" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="genericIFramePerspective">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>frontend:plugin</sv:value>
   </sv:property>
@@ -83,7 +88,10 @@
     <sv:value>service.tab</sv:value>
   </sv:property>
   <sv:property sv:name="iframe.src" sv:type="String">
-    <sv:value>http://www.onehippo.org</sv:value>
+    <sv:value>/cms/examples/whoweare.jsp</sv:value>
+  </sv:property>
+  <sv:property sv:name="x-frame-options" sv:type="String">
+    <sv:value>ALLOW-FROM http://www.example.org</sv:value>
   </sv:property>
   <sv:node sv:name="layout.wireframe">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -104,6 +112,7 @@
   </sv:node>
 </sv:node>
         ]]></source>
+        </div>
       </subsection>
       <subsection name="Plugin Configuration Details">
         <p>You can configure the followings:</p>
@@ -144,6 +153,52 @@
               The suffix of the icon for this perspective.
               For example, if the prefix of the icon is 'generic-iframe-perspective-' and the suffix is '.png', then
               'classpath:/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective-32.png' resource will be used for the perspective icon.
+            </td>
+          </tr>
+          <tr>
+            <td>x-frame-options</td>
+            <td>ALLOW-FROM http://www.example.org</td>
+            <td></td>
+            <td>
+              Optionally set <strong>X-Frame-Options</strong> response header if configured.
+              <br/>
+              See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options</a> for details.
+            </td>
+          </tr>
+          <tr>
+            <td>content-security-policy</td>
+            <td>Refer to the specification</td>
+            <td></td>
+            <td>
+              Optionally set <strong>Content-Security-Policy</strong> response header if configured.
+              <br/>
+              See <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
+              and <a href="https://www.owasp.org/index.php/Content_Security_Policy">https://www.owasp.org/index.php/Content_Security_Policy</a>
+              for details.
+            </td>
+          </tr>
+          <tr>
+            <td>x-content-security-policy</td>
+            <td>Refer to the specification</td>
+            <td></td>
+            <td>
+              Optionally set <strong>X-Content-Security-Policy</strong> response header if configured.
+              <br/>
+              See <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
+              and <a href="https://www.owasp.org/index.php/Content_Security_Policy">https://www.owasp.org/index.php/Content_Security_Policy</a>
+              for details.
+            </td>
+          </tr>
+          <tr>
+            <td>x-webkit-csp</td>
+            <td>Refer to the specification</td>
+            <td></td>
+            <td>
+              Optionally set <strong>X-Webkit-CSP</strong> response header if configured.
+              <br/>
+              See <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
+              and <a href="https://www.owasp.org/index.php/Content_Security_Policy">https://www.owasp.org/index.php/Content_Security_Policy</a>
+              for details.
             </td>
           </tr>
           <tr>

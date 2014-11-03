@@ -26,12 +26,14 @@
         <p>
           You can check out the demo project and run it like the following:
         </p>
+        <div class="brush: bash">
         <source><![CDATA[
 $ svn checkout https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv-demo/trunk iframeprspectiv-demo
 $ cd iframeprspectiv-demo
-$ mvn install
+$ mvn clean package
 $ mvn -P cargo.run
         ]]></source>
+        </div>
         <p>
           And, visit <a href="http://localhost:8080/cms" target="_blank">http://localhost:8080/cms</a>.
           You can click the last perspective tab to switch to the IFrame Perspective.
@@ -39,9 +41,7 @@ $ mvn -P cargo.run
       </subsection>
       <subsection name="Project status">
         <p>
-          The latest version is 1.02.00 and 1.01.00.
-          v1.02.00 is compatible with Hippo CMS 2.21.06 or later,
-          while v1.01.00 is compatible with Hippo CMS 2.19.xx or [2.21.00, 2.21.06).
+          For the latest version of the HST Configuration Code Editor, see <a href="release-notes.html">Release Notes</a>.
         </p>
         <p>
           See the

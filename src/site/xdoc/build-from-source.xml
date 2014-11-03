@@ -23,10 +23,10 @@
       <subsection name="Requirements">
         <ul>
           <li>
-            <p>Java 5 JDK</p>
+            <p>Java 7 or higher SDK</p>
           </li>
           <li>
-            <p>Maven 2 or 3</p>
+            <p>Maven 3</p>
           </li>
           <li>
             <p>Subversion client</p>
@@ -36,16 +36,22 @@
       <subsection name="Checkout the source code">
         <p>
           Check out the trunk source code from the SVN repository:
-              </p>
+        </p>
+        <div class="brush: bash">
         <source>svn co http://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</source>
+        </div>
         <p>
           Build the project using Maven:
-              </p>
+        </p>
+        <div class="brush: bash">
         <source>mvn install</source>
+        </div>
         <p>
           Build all the reports and the site (requires Maven 2):
-              </p>
+        </p>
+        <div class="brush: bash">
         <source>mvn site</source>
+        </div>
       </subsection>
     </section>
   </body>
