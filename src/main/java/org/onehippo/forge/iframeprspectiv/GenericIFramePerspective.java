@@ -60,17 +60,20 @@ public class GenericIFramePerspective extends Perspective {
     private String xFrameOptions;
 
     /**
-     * @see http://caniuse.com/#feat=contentsecuritypolicy
+     * @see https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
+     * @see https://www.owasp.org/index.php/Content_Security_Policy
      */
     private String contentSecurityPolicy;
 
     /**
-     * @see http://caniuse.com/#feat=contentsecuritypolicy
+     * @see https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
+     * @see https://www.owasp.org/index.php/Content_Security_Policy
      */
     private String xContentSecurityPolicy;
 
     /**
-     * @see http://caniuse.com/#feat=contentsecuritypolicy
+     * @see https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
+     * @see https://www.owasp.org/index.php/Content_Security_Policy
      */
     private String xWebkitCSP;
 
