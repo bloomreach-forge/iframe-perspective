@@ -23,6 +23,10 @@
           <th>Hippo CMS Release version</th>
         </tr>
         <tr>
+          <td>2.1.x</td>
+          <td>10.0, 10.1</td>
+        </tr>
+        <tr>
           <td>1.03.xx</td>
           <td>7.9.x</td>
         </tr>
@@ -37,6 +41,11 @@
       </table>
     </section>
     <section name="Release Notes">
+      <subsection name="2.1.0">
+        <ul>
+          <li>Coming Soon... Upgrade to be compatible with Hippo CMS 10</li>
+        </ul>
+      </subsection>
       <subsection name="1.03.00">
         <ul>
           <li>Upgrade to be compatible with 7.9.</li>
