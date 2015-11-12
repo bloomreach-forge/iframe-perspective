@@ -80,9 +80,9 @@
   </developers>
 
   <scm>
-    <connection>scm:svn:https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</connection>
-    <developerConnection>scm:svn:https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/trunk</developerConnection>
-    <url>http://forge.onehippo.org/svn/iframeprspectiv/trunk</url>
+    <connection>scm:svn:https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/branches/iframeprspectiv-1.03.xx</connection>
+    <developerConnection>scm:svn:https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv/branches/iframeprspectiv-1.03.xx</developerConnection>
+    <url>http://forge.onehippo.org/svn/iframeprspectiv/branches/iframeprspectiv-1.03.xx</url>
   </scm>
 
   <issueManagement>
