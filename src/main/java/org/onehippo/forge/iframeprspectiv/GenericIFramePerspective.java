@@ -55,25 +55,29 @@ public class GenericIFramePerspective extends Perspective {
     private String iconSuffix;
 
     /**
-     * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options
+     * X-Frame-Options.
+     * See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options</a>.
      */
     private String xFrameOptions;
 
     /**
-     * @see https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
-     * @see https://www.owasp.org/index.php/Content_Security_Policy
+     * Content_Security_Policy.
+     * See <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
+     * and <a href="https://www.owasp.org/index.php/Content_Security_Policy">https://www.owasp.org/index.php/Content_Security_Policy</a>.
      */
     private String contentSecurityPolicy;
 
     /**
-     * @see https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
-     * @see https://www.owasp.org/index.php/Content_Security_Policy
+     * X_Content_Security_Policy.
+     * See <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
+     * and <a href="https://www.owasp.org/index.php/Content_Security_Policy">https://www.owasp.org/index.php/Content_Security_Policy</a>.
      */
     private String xContentSecurityPolicy;
 
     /**
-     * @see https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy
-     * @see https://www.owasp.org/index.php/Content_Security_Policy
+     * Webkit_CSP.
+     * See <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
+     * and <a href="https://www.owasp.org/index.php/Content_Security_Policy">https://www.owasp.org/index.php/Content_Security_Policy</a>.
      */
     private String xWebkitCSP;
 
