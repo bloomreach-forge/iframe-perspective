@@ -22,23 +22,6 @@
           The IFrame Perspective Plugin privides an IFrame based CMS Perspective Plugin, with keeping the navigation states of the IFrame element.
         </p>
       </subsection>
-      <subsection name="Running a demo">
-        <p>
-          You can check out the demo project and run it like the following:
-        </p>
-        <div class="brush: bash">
-        <source><![CDATA[
-$ svn checkout https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv-demo/trunk iframeprspectiv-demo
-$ cd iframeprspectiv-demo
-$ mvn clean package
-$ mvn -P cargo.run
-        ]]></source>
-        </div>
-        <p>
-          And, visit <a href="http://localhost:8080/cms" target="_blank">http://localhost:8080/cms</a>.
-          You can click the last perspective tab to switch to the IFrame Perspective.
-        </p>
-      </subsection>
       <subsection name="Security Considerations">
         <p>
           By default, Hippo CMS web application doesn't allow to navigate a URL from a different origin
@@ -74,14 +57,40 @@ $ mvn -P cargo.run
           </tr>
         </table>
       </subsection>
-      <subsection name="Project status">
+    </section>
+    <section name="Demo Application">
+      <subsection name="Demo Application with Hippo CMS 10">
         <p>
-          For the latest version of the HST Configuration Code Editor, see <a href="release-notes.html">Release Notes</a>.
+          You can check out the demo project and run it like the following:
         </p>
+        <div class="brush: bash">
+        <source><![CDATA[
+$ svn checkout https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv-demo/trunk iframeprspectiv-demo-TRUNK
+$ cd iframeprspectiv-demo-TRUNK
+$ mvn clean package
+$ mvn -P cargo.run
+        ]]></source>
+        </div>
         <p>
-          See the
-          <a href="http://forge.onehippo.org/gf/project/iframeprspectiv">forge project page</a>
-          for more info about the project itself.
+          And, visit <a href="http://localhost:8080/cms" target="_blank">http://localhost:8080/cms</a>.
+          You can click the last perspective tab to switch to the IFrame Perspective.
+        </p>
+      </subsection>
+      <subsection name="Demo Application with Hippo CMS 7.9">
+        <p>
+          You can check out the demo project and run it like the following:
+        </p>
+        <div class="brush: bash">
+        <source><![CDATA[
+$ svn checkout https://forge.onehippo.org/svn/iframeprspectiv/iframeprspectiv-demo/branches/iframeprspectiv-demo-1.03.xx
+$ cd iframeprspectiv-demo-1.03.xx
+$ mvn clean package
+$ mvn -P cargo.run
+        ]]></source>
+        </div>
+        <p>
+          And, visit <a href="http://localhost:8080/cms" target="_blank">http://localhost:8080/cms</a>.
+          You can click the last perspective tab to switch to the IFrame Perspective.
         </p>
       </subsection>
     </section>

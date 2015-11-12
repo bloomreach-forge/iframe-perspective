@@ -22,27 +22,55 @@
           These instruction assumes that you have maven 3 based build for your site.
         </p>
       </subsection>
-      <subsection name="Maven 2 repository">
-        <p>Add this repository to your root pom.xml:</p>
+      <subsection name="Maven Dependency">
+        <p>Make sure you have the dependency definition in the root pom.xml of your project:</p>
         <div class="brush: xml">
         <source><![CDATA[
-    <repository>
-      <id>hippo-maven2-forge</id>
-      <name>Hippo Maven 2 Forge</name>
-      <url>http://maven.onehippo.com/maven2-forge</url>
-    </repository>]]></source>
-        </div>
-      </subsection>
+<!-- SNIP -->
 
-      <subsection name="Specifying the dependency">
-        <p>Add this dependency to the pom.xml:</p>
+<dependencyManagement>
+
+  <!-- SNIP -->
+
+  <dependencies>
+
+    <!-- SNIP -->
+
+    <!-- NOTE: You should set a property named 'forge.iframeprspectiv.version' to a version of this plugin! -->
+
+    <dependency>
+      <groupId>org.onehippo.forge.iframeprspectiv</groupId>
+      <artifactId>iframeprspectiv</artifactId>
+      <version>${forge.iframeprspectiv.version}</version>
+    </dependency>
+
+    <!-- SNIP -->
+
+  </dependencies>
+
+  <!-- SNIP -->
+
+</dependencyManagement>
+        ]]></source>
+        </div>
+        <p>And add the following dependency reference into your Hippo CMS Web Application module subproject:</p>
         <div class="brush: xml">
         <source><![CDATA[
-  <dependency>
-    <groupId>org.onehippo.forge.iframeprspectiv</groupId>
-    <artifactId>iframeprspectiv</artifactId>
-    <version>${forge.iframeprspectiv.version}</version>
-  </dependency>]]></source>
+  <!-- SNIP -->
+
+  <dependencies>
+
+    <!-- SNIP -->
+
+    <dependency>
+      <groupId>org.onehippo.forge.iframeprspectiv</groupId>
+      <artifactId>iframeprspectiv</artifactId>
+    </dependency>
+
+    <!-- SNIP -->
+
+  </dependencies>
+        ]]></source>
         </div>
       </subsection>
 
