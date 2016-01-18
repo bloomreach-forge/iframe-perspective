@@ -94,7 +94,7 @@
       <div class="brush: java">
         <source><![CDATA[
     org.hippoecm.frontend.session.UserSession userSession = org.hippoecm.frontend.session.UserSession.get();
-    javax.jcr.Session jcrSession = jcrSession = userSession.getJcrSession();
+    javax.jcr.Session jcrSession = userSession.getJcrSession();
         ]]></source>
       </div>
       <p>
