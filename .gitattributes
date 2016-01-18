@@ -13,4 +13,5 @@ src/site/site.xml -text
 src/site/xdoc/build-from-source.xml -text
 src/site/xdoc/index.xml -text
 src/site/xdoc/install.xml -text
+src/site/xdoc/non-wicket-comp-pages.xml -text
 src/site/xdoc/release-notes.xml -text
