@@ -29,7 +29,6 @@
     <menu name="Usage">
       <item name="Installation" href="install.html" />
       <item name="How to build secure non-Wicket-component based pages" href="non-wicket-comp-pages.html" />
-      <item name="Build from source" href="build-from-source.html" />
     </menu>
 
     <menu ref="reports" />
