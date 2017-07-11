@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/onehippo-forge/iframe-perspective.svg?branch=develop)](https://travis-ci.org/onehippo-forge/iframe-perspective)
 
 # Hippo IFrame Perspective Plugin
 

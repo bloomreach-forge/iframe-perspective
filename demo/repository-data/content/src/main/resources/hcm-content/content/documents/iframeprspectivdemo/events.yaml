@@ -1,0 +1,145 @@
+/content/documents/iframeprspectivdemo/events:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: 739a1e3d-9090-491e-a86d-aa59320e19a9
+  hippostd:foldertype: [new-events-document, new-events-folder]
+  hippotranslation:id: 698ed3eb-24c9-4654-9dc6-b5b30f3ae2a9
+  hippotranslation:locale: en
+  /2017:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 614663c2-8990-41be-ba24-1f0c9749494e
+    hippostd:foldertype: [new-events-document, new-events-folder]
+    hippotranslation:id: 677cb39f-1e6c-4049-8d97-d340e4df49d4
+    hippotranslation:locale: en
+    /07:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 4693fc0d-1b54-41b7-89fd-429f52f0f805
+      hippostd:foldertype: [new-events-document, new-events-folder]
+      hippotranslation:id: ed3b4f0a-ac89-4aff-847e-3c4a2142cead
+      hippotranslation:locale: en
+      /breakfast:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+        jcr:uuid: b8f5eb45-7200-452a-b26e-3118a0dc60b8
+        hippo:name: Breakfast
+        /breakfast:
+          jcr:primaryType: iframeprspectivdemo:eventsdocument
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 9af6e641-5950-4c23-a1ca-a45f2c7f383f
+          hippo:availability: [live, preview]
+          hippostd:holder: admin
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2013-11-12T11:00:00+01:00
+          hippostdpubwf:lastModificationDate: 2013-11-12T11:11:00+01:00
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2013-11-12T12:16:00+01:00
+          hippotranslation:id: f272e10d-13e5-4fea-8279-97cf67e7ae29
+          hippotranslation:locale: en
+          iframeprspectivdemo:date: 2013-11-12T08:00:00+01:00
+          iframeprspectivdemo:documenttype: event
+          iframeprspectivdemo:enddate: 2018-07-11T16:28:00-04:00
+          iframeprspectivdemo:introduction: Start the day with a nice breakfast.
+          iframeprspectivdemo:location: Room 101
+          iframeprspectivdemo:title: Breakfast
+          /iframeprspectivdemo:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <html>
+                        <body>
+
+                        <p>Breakfast is served starting from 8:00 until 9:30.</p>
+
+                        </body>
+                        </html>
+          /iframeprspectivdemo:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: c8f03498-56eb-46c9-83b2-cf014f2e03d7
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /introduction-speech:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+        jcr:uuid: 18e36c35-429d-4fee-b76e-eeabcbfc08bb
+        hippo:name: Introduction speech
+        /introduction-speech:
+          jcr:primaryType: iframeprspectivdemo:eventsdocument
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 30ae37a8-d80a-49e2-a5cd-0b0eb5d4be5e
+          hippo:availability: [live, preview]
+          hippostd:holder: admin
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2013-11-12T11:02:00+01:00
+          hippostdpubwf:lastModificationDate: 2013-11-12T11:16:00+01:00
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2013-11-12T12:16:00+01:00
+          hippotranslation:id: 2d3a9336-a7fd-486c-b37a-b25a37c0747d
+          hippotranslation:locale: en
+          iframeprspectivdemo:date: 2013-11-12T10:00:00+01:00
+          iframeprspectivdemo:documenttype: event
+          iframeprspectivdemo:enddate: 2018-07-11T16:28:00-04:00
+          iframeprspectivdemo:introduction: After breakfast there will be an introductory
+            speech.
+          iframeprspectivdemo:location: Room 400
+          iframeprspectivdemo:title: Introduction speech
+          /iframeprspectivdemo:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <html>
+                        <body>
+
+                        <p>Speech will be about the workshop.</p>
+
+                        </body>
+                        </html>
+          /iframeprspectivdemo:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: 9f32434e-84e3-4150-a6f2-d89a67be2fb1
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /workshop:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 7a29ec60-2689-48b2-aca2-49696c5c23eb
+        /workshop:
+          jcr:primaryType: iframeprspectivdemo:eventsdocument
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: fec6c59d-fa8f-484d-8b3b-30af2a01d256
+          hippo:availability: [live, preview]
+          hippostd:holder: admin
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2013-11-12T11:16:00+01:00
+          hippostdpubwf:lastModificationDate: 2013-11-12T11:18:00+01:00
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2013-11-12T12:16:00+01:00
+          hippotranslation:id: 559f04b1-786f-4b7e-b0e5-c2c4ba003a18
+          hippotranslation:locale: en
+          iframeprspectivdemo:date: 2013-11-12T13:00:00+01:00
+          iframeprspectivdemo:documenttype: event
+          iframeprspectivdemo:enddate: 2018-07-11T16:28:00-04:00
+          iframeprspectivdemo:introduction: Workshop starts at 1:00
+          iframeprspectivdemo:location: Room 600
+          iframeprspectivdemo:title: Workshop
+          /iframeprspectivdemo:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <html>
+                        <body>
+                        <strong>Everybody </strong>
+                        <p>can join the workshop and start practicing what they learned during the last
+                        week.</p>
+
+                        </body>
+                        </html>
+          /iframeprspectivdemo:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: d035387b-f9ce-49f6-bcb0-9ab6915a2d5f
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
