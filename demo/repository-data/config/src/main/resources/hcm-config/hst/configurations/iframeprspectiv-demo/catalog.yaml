@@ -1,0 +1,6 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/iframeprspectivdemo/hst:catalog:
+      jcr:primaryType: hst:catalog
+      /iframeprspectivdemo-catalog:
+        jcr:primaryType: hst:containeritempackage
