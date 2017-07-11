@@ -78,7 +78,8 @@
 
         <p>
           If you want to add a IFrame perspective plugin, you need to add a configuration node (e.g, <code>example-iframe-perspective</code>)
-          to the repository like the following example (in System View XML format):
+          into the <code>/hippo:configuration/hippo:frontend/cms/cms-static/</code> node in the repository
+          like the following example (in System View XML format):
         </p>
 
         <div class="brush: xml">

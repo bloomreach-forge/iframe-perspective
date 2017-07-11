@@ -11,7 +11,14 @@
   <packaging>war</packaging>
   <name>IFrame Perspective Plugin Demo CMS</name>
   <description>IFrame Perspective Plugin Demo CMS</description>
+
   <dependencies>
+
+    <dependency>
+      <groupId>org.onehippo.forge.iframeprspectiv</groupId>
+      <artifactId>iframeprspectiv</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>org.onehippo.cms7.hst.dependencies</groupId>
       <artifactId>hst-repository-dependencies</artifactId>
