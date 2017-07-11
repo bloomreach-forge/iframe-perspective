@@ -2,6 +2,7 @@ definitions:
   config:
     /hippo:configuration/hippo:frontend/cms/cms-static/example-iframe-perspective:
       jcr:primaryType: frontend:plugin
+      perspective.title: Example IFrame
       iframe.src: /cms/examples/whoweare.jsp
       perspective.title: iframe-perspective-title
       plugin.class: org.onehippo.forge.iframeprspectiv.GenericIFramePerspective
