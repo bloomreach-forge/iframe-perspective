@@ -1,5 +1,5 @@
 <?xml version="1.0"?><!--
-    Copyright 2011 Hippo Licensed under the Apache License, Version 2.0
+    Copyright 2011-2018 Hippo Licensed under the Apache License, Version 2.0
     (the "License"); you may not use this file except in compliance with
     the License. You may obtain a copy of the License at
 
@@ -169,9 +169,14 @@
           </tr>
           <tr>
             <td>perspective.title</td>
-            <td>My Application IFrame</td>
+            <td>iframe-perspective-title</td>
             <td>Generic IFrame Panel</td>
-            <td>Title for this perspective</td>
+            <td>
+              Resource bundle key in classpath:org/onehippo/forge/iframeprspectiv/GenericIFramePerspective*.properties
+              for the title for this perspective.
+              <BR/>
+              See <a href="#Setting_Perspective_Plugin_Title">Setting Perspective Plugin Title</a> section for detail.
+            </td>
           </tr>
           <tr>
             <td>iframe.src</td>
@@ -257,6 +262,40 @@
           </tr>
         </table>
       </subsection>
+
+      <subsection name="Setting Perspective Plugin Title">
+
+        <p>
+          The <code>perspective.title</code> configuration parameter lets you customize the title of the IFrame perspective plugin.
+        </p>
+        <p>
+          If the parameter is set to "iframe-perspective-title" for example,
+          then the title of this perspective plugin will be read from the resource bundle value ("Generic IFrame Panel" by default)
+          found by the bundle key, "iframe-perspective-title".
+        </p>
+        <p>
+          Therefore, to customize the title of your IFrame perspective plugin, you should <i>shadow</i>
+          <code>classpath:org/onehippo/forge/iframeprspectiv/GenericIFramePerspective*.properties</code>
+          in your CMS web application project (cms/)
+          (e.g. add <code>cms/src/main/resources/org/onehippo/forge/iframeprspectiv/GenericIFramePerspective.properties</code>).
+        </p>
+        <p>
+          And add a resource bundle key ("iframe-perspective-title" or something else like "my-iframe-perspective-title" for example)
+          with a custom title string value like the following example:
+        </p>
+
+        <div class="brush: plain">
+        <source><![CDATA[
+# picked up when the parameter is set to "iframe-perspective-title"
+iframe-perspective-title=Generic IFrame Panel
+
+# picked up when the parameter is set to "my-iframe-perspective-title"
+my-iframe-perspective-title=My IFrame Panel
+        ]]></source>
+        </div>
+
+      </subsection>
+
     </section>
   </body>
 </document>
