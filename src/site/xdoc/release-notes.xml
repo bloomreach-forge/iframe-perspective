@@ -37,6 +37,12 @@
       </table>
     </section>
     <section name="Release Notes">
+      <subsection name="3.0.1">
+        <ul>
+          <li>[<a href='https://issues.onehippo.com/browse/HIPFORGE-194'>HIPFORGE-194</a>] -         [IFramePerspective] Upgrade demo on the latest 12.x
+          </li>
+        </ul>
+      </subsection>
       <subsection name="3.0.0">
         <ul>
           <li>Compatible with Hippo CMS 12</li>
