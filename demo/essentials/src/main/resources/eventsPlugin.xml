@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <installerDocument>
-    <name>eventsPlugin</name>
-    <dateAdded>2017-07-11T16:28:57.008-04:00</dateAdded>
-    <dateInstalled>2017-07-11T16:28:52.360-04:00</dateInstalled>
-    <installationState>installing</installationState>
+    <dateAdded>2018-09-14T08:32:17.069-04:00</dateAdded>
+    <dateInstalled>2018-09-14T08:32:12.400-04:00</dateInstalled>
+    <installationState>installed</installationState>
 </installerDocument>

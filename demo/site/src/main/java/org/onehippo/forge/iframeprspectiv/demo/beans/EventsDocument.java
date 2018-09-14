@@ -1,6 +1,6 @@
 package org.onehippo.forge.iframeprspectiv.demo.beans;
 /*
- * Copyright 2014 Hippo B.V. (http://www.onehippo.com)
+ * Copyright 2014-2018 Hippo B.V. (http://www.onehippo.com)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,15 +29,15 @@ public class EventsDocument extends HippoDocument {
     /**
      * The document type of the events document.
      */
-    public final static String DOCUMENT_TYPE = "iframeprspectivdemo:eventsdocument";
+    public static final String DOCUMENT_TYPE = "iframeprspectivdemo:eventsdocument";
 
-    private final static String TITLE = "iframeprspectivdemo:title";
-    private final static String DATE = "iframeprspectivdemo:date";
-    private final static String INTRODUCTION = "iframeprspectivdemo:introduction";
-    private final static String IMAGE = "iframeprspectivdemo:image";
-    private final static String CONTENT = "iframeprspectivdemo:content";
-    private final static String LOCATION = "iframeprspectivdemo:location";
-    private final static String END_DATE = "iframeprspectivdemo:enddate";
+    private static final String TITLE = "iframeprspectivdemo:title";
+    private static final String DATE = "iframeprspectivdemo:date";
+    private static final String INTRODUCTION = "iframeprspectivdemo:introduction";
+    private static final String IMAGE = "iframeprspectivdemo:image";
+    private static final String CONTENT = "iframeprspectivdemo:content";
+    private static final String LOCATION = "iframeprspectivdemo:location";
+    private static final String END_DATE = "iframeprspectivdemo:enddate";
 
     /**
      * Get the title of the document.
