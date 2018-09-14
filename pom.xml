@@ -20,7 +20,7 @@
   <description>IFrame Perspective Plugin</description>
   <groupId>org.onehippo.forge.iframeprspectiv</groupId>
   <artifactId>iframeprspectiv</artifactId>
-  <version>3.0.1-SNAPSHOT</version>
+  <version>3.0.1</version>
   <packaging>jar</packaging>
   <url>https://onehippo-forge.github.io/iframe-perspective/</url>
 
