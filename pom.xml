@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
-  Copyright 2011 Hippo
+  Copyright 2011-2018 Hippo
 
   Licensed under the Apache License, Version 2.0 (the  "License");
   you may not use this file except in compliance with the License.
@@ -27,30 +27,35 @@
   <properties>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.build.javaVersion>1.7</project.build.javaVersion>
+    <project.build.javaVersion>1.8</project.build.javaVersion>
 
-    <hippo.cms.version>5.0.0</hippo.cms.version>
+    <hippo.cms.version>5.1.0</hippo.cms.version>
 
     <lib.junit.version>4.12</lib.junit.version>
     <lib.easymock.version>3.4</lib.easymock.version>
     <lib.slf4j.version>1.7.25</lib.slf4j.version>
     <lib.log4j2.version>2.8.2</lib.log4j2.version>
 
-    <plugin.compiler.version>3.1</plugin.compiler.version>
+    <plugin.compiler.version>3.8.0</plugin.compiler.version>
     <plugin.clean.version>2.5</plugin.clean.version>
     <plugin.deploy.version>2.8.1</plugin.deploy.version>
     <plugin.install.version>2.5.1</plugin.install.version>
     <plugin.jar.version>2.4</plugin.jar.version>
     <plugin.javadoc.version>2.9.1</plugin.javadoc.version>
     <plugin.jxr.version>2.3</plugin.jxr.version>
-    <plugin.pmd.version>3.1</plugin.pmd.version>
-    <plugin.project-info-reports.version>2.7</plugin.project-info-reports.version>
+    <plugin.project-info-reports.version>3.0.0</plugin.project-info-reports.version>
     <plugin.release.version>2.5</plugin.release.version>
     <plugin.resources.version>2.6</plugin.resources.version>
-    <plugin.site.version>3.6</plugin.site.version>
+    <plugin.site.version>3.7.1</plugin.site.version>
     <plugin.source.version>2.2.1</plugin.source.version>
-    <plugin.surefire.version>2.17</plugin.surefire.version>
-    <plugin.surefire-report.version>2.17</plugin.surefire-report.version>
+    <plugin.surefire.version>2.22.0</plugin.surefire.version>
+    <plugin.surefire-report.version>2.22.0</plugin.surefire-report.version>
+
+    <plugin.checkstyle.version>2.6</plugin.checkstyle.version>
+    <plugin.cobertura.version>2.4</plugin.cobertura.version>
+    <plugin.findbugs.version>2.3.2</plugin.findbugs.version>
+
+    <extension.wagon-svn.version>1.9</extension.wagon-svn.version>
 
   </properties>
 
@@ -123,6 +128,13 @@
       <artifactId>hippo-cms-api</artifactId>
       <version>${hippo.cms.version}</version>
       <scope>provided</scope>
+      <exclusions>
+        <!-- Exclude this since it makes errors in project-info report generation. -->
+        <exclusion>
+          <groupId>xerces</groupId>
+          <artifactId>xercesImpl</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
@@ -189,16 +201,6 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-pmd-plugin</artifactId>
-        <version>${plugin.pmd.version}</version>
-        <configuration>
-          <linkXref>true</linkXref>
-          <sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-          <targetJdk>${project.build.javaVersion}</targetJdk>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>${plugin.javadoc.version}</version>
         <configuration>
@@ -261,9 +263,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
         <version>${plugin.site.version}</version>
-        <configuration>
-          <outputDirectory>docs</outputDirectory>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -287,6 +286,25 @@
     </plugins>
 
   </build>
+
+  <profiles>
+    <!-- Only for generating/publishing GitHub Site Pages into docs/ folder from master branch. -->
+    <profile>
+      <id>github.pages</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>${plugin.site.version}</version>
+            <configuration>
+              <outputDirectory>docs</outputDirectory>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
 </project>
 
