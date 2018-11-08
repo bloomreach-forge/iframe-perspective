@@ -22,7 +22,7 @@
   <artifactId>iframeprspectiv</artifactId>
   <version>3.0.2-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <url>https://onehippo-forge.github.io/iframe-perspective/</url>
+  <url>https://bloomreach-forge.github.io/iframe-perspective/</url>
 
   <properties>
 
@@ -82,9 +82,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:onehippo-forge/iframe-perspective.git</connection>
-    <developerConnection>scm:git:git@github.com:onehippo-forge/iframe-perspective.git</developerConnection>
-    <url>https://github.com/onehippo-forge/iframe-perspective.git</url>
+    <connection>scm:git:git@github.com:bloomreach-forge/iframe-perspective.git</connection>
+    <developerConnection>scm:git:git@github.com:bloomreach-forge/iframe-perspective.git</developerConnection>
+    <url>https://github.com/bloomreach-forge/iframe-perspective.git</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -95,7 +95,7 @@
 
   <ciManagement>
     <system>Travis CI</system>
-    <url>https://travis-ci.org/onehippo-forge/iframe-perspective</url>
+    <url>https://travis-ci.org/bloomreach-forge/iframe-perspective</url>
   </ciManagement>
 
   <distributionManagement>
