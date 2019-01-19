@@ -11,6 +11,6 @@ definitions:
       /layout.wireframe:
         jcr:primaryType: frontend:pluginconfig
         center: id=generic-iframe-perspective-center,body=generic-iframe-perspective-center-body,scroll=true
-        linked.with.parent: 'true'
+        linked.with.parent: true
         root.id: generic-iframe-perspective-wrapper
         top: id=generic-iframe-perspective-top,body=generic-iframe-perspective-top-body,height=35
