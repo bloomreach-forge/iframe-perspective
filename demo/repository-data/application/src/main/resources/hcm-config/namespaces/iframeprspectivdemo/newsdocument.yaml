@@ -3,19 +3,19 @@ definitions:
     /hippo:namespaces/iframeprspectivdemo/newsdocument:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 5a9a2c5c-8eaa-4b2b-bcaf-4c0b1b6a504e
+      jcr:uuid: 9e7a628a-6939-4fd9-aa03-0755099bfd61
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 40680dc6-6b9f-44ea-8259-f53116729efc
+        jcr:uuid: db076845-3e53-4b5e-96c5-0abeb5084cf1
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: f2cca92c-775d-4045-9353-6c6a45215434
+          jcr:uuid: 79c65599-94aa-4a56-a054-a7344969d6a6
           hipposysedit:node: true
           hipposysedit:supertype: ['iframeprspectivdemo:basedocument', 'hippostd:relaxed',
             'hippotranslation:translated']
-          hipposysedit:uri: http://www.onehippo.org/iframeprspectivdemo/nt/1.0
+          hipposysedit:uri: http://www.iframeprspectivdemo.com/iframeprspectivdemo/nt/1.0
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -86,7 +86,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: iframeprspectivdemo:newsdocument
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 6059ac8a-4c19-4448-9ab7-59a78f1f26a3
+          jcr:uuid: 9960f1b7-6d1c-4a0c-ba51-971d604216e4
           hippo:related___pathreference: []
           hippostd:holder: holder
           hippostd:state: draft

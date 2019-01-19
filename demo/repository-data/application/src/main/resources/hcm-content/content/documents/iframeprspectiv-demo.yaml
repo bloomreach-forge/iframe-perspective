@@ -2,7 +2,7 @@
   .meta:order-before: administration
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
-  jcr:uuid: 5effe03e-356b-40af-8b77-5a94ca262b96
+  jcr:uuid: 64be7dc1-9858-4a2b-aedd-b5d24ab3c2ad
   hippo:name: IFrame Perspective Plugin Demo
   hippostd:foldertype: [new-translated-folder, new-document]
   hippotranslation:id: 996bcac5-86cf-49b5-a7a3-16a74863e814
