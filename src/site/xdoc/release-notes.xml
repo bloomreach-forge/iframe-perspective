@@ -41,6 +41,12 @@
       </table>
     </section>
     <section name="Release Notes (4.x)">
+      <subsection name="4.0.1">
+        <ul>
+          <li>[<a href='https://issues.onehippo.com/browse/HIPFORGE-285'>HIPFORGE-285</a>] -         [IFramePerspective] It's not possible to set the plugin title
+          </li>
+        </ul>
+      </subsection>
       <subsection name="4.0.0">
         <ul>
           <li>[<a href='https://issues.onehippo.com/browse/HIPFORGE-255'>HIPFORGE-255</a>] -         [IFramePerspective] Upgrade for v13 compatibility
