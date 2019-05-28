@@ -22,6 +22,8 @@ import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.markup.head.OnDomReadyHeaderItem;
 import org.apache.wicket.markup.html.WebMarkupContainer;
+import org.apache.wicket.model.IModel;
+import org.apache.wicket.model.StringResourceModel;
 import org.apache.wicket.request.Response;
 import org.apache.wicket.request.cycle.RequestCycle;
 import org.apache.wicket.request.http.WebResponse;
@@ -41,6 +43,8 @@ public class GenericIFramePerspective extends Perspective {
 
     private static Logger log = LoggerFactory.getLogger(GenericIFramePerspective.class);
 
+    private static final String TITLE = "perspective.title";
+
     private static final String DEFAULT_ICON_PREFIX = "generic-iframe-perspective-";
     private static final String DEFAULT_ICON_SUFFIX = ".png";
 
@@ -51,6 +55,7 @@ public class GenericIFramePerspective extends Perspective {
 
     private static final String IFRAME_ATTRIBUTE_PREFIX = "iframe.";
 
+    private IModel<String> titleModel;
     private String iconPrefix;
     private String iconSuffix;
 
@@ -87,6 +92,9 @@ public class GenericIFramePerspective extends Perspective {
         super(context, config);
         setOutputMarkupId(true);
 
+        final String titleKey = config.getString(TITLE, TITLE_KEY);
+        titleModel = new StringResourceModel(titleKey, this);
+
         iframe = new WebMarkupContainer("generic-perspective-iframe");
         iframe.setOutputMarkupId(true);
 
@@ -110,6 +118,11 @@ public class GenericIFramePerspective extends Perspective {
         }
 
         add(iframe);
+    }
+
+    @Override
+    public IModel<String> getTitle() {
+        return titleModel;
     }
 
     @Override
