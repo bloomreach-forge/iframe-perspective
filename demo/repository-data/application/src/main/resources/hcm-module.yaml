@@ -1,0 +1,6 @@
+group:
+  name: iframeprspectiv-demo
+  after: hippo-cms
+project: iframeprspectiv-demo
+module:
+  name: iframeprspectiv-demo-repository-data-application

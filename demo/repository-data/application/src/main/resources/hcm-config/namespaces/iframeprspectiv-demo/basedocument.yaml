@@ -1,0 +1,15 @@
+definitions:
+  config:
+    /hippo:namespaces/iframeprspectivdemo/basedocument:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 37ba637d-8ada-4c76-bcd4-17d3851396a3
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: d6093471-5995-45de-94b5-4b070f1db304
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['hipposysedit:remodel']
+          hipposysedit:supertype: ['hippo:document', 'hippostdpubwf:document', 'hippostd:publishableSummary']
+          hipposysedit:uri: http://www.iframeprspectivdemo.com/iframeprspectivdemo/nt/1.0
