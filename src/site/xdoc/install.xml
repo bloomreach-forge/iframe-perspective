@@ -162,6 +162,16 @@ definitions:
         </p>
 
         <p>
+          <em>Note:</em> Also, note that the CMS UI does not support multiple custom perspective plugin configurations
+          with the same <code>plugin.class</code> property value. That's why the second example shown above is set to use
+          <code>org.onehippo.forge.iframeprspectiv.GenericIFramePerspective2</code> instead.
+          For convenience, this project provides 9 different class names for the same feature
+          (<code>org.onehippo.forge.iframeprspectiv.GenericIFramePerspective2</code> ~ <code>org.onehippo.forge.iframeprspectiv.GenericIFramePerspective10</code>).
+          This allows developers to avoid adding a custom class extending <code>org.onehippo.forge.iframeprspectiv.GenericIFramePerspective</code>
+          in their projects.
+        </p>
+
+        <p>
           Also, the translation key-value pairs for each perspective must be added to <code>/hippo:configuration/hippo:translations/hippo:navigation/navigationitem</code>
           like the following example:
         </p>
