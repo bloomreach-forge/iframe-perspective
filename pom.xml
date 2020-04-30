@@ -29,7 +29,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.javaVersion>1.8</project.build.javaVersion>
 
-    <hippo.cms.version>14.0.0</hippo.cms.version>
+    <hippo.cms.version>14.1.0</hippo.cms.version>
 
     <lib.junit.version>4.12</lib.junit.version>
     <lib.easymock.version>3.4</lib.easymock.version>

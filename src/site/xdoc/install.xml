@@ -110,56 +110,79 @@
       <subsection name="Add the plugin configuration to the repository">
 
         <p>
-          If you want to add a IFrame perspective plugin, you need to add a configuration node (e.g, <code>example-iframe-perspective</code>)
-          into the <code>/hippo:configuration/hippo:frontend/cms/cms-static/</code> node in the repository
-          like the following example (in System View XML format):
+          If you want to add IFrame based perspective configurations, you need to add configuration nodes (e.g, <code>example-iframe-perspective</code>)
+          into the <code>/hippo:configuration/hippo:frontend/cms/cms-static/</code> node in the repository.
+          In the following example, for demonstration purpose, two IFrame based perspectives were added:
+          One is 'example-iframe-perspective' and the other is 'example-iframe-perspective-second'.
         </p>
 
-        <div class="brush: xml">
+        <div class="brush: plain">
         <source><![CDATA[
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="example-iframe-perspective">
-  <sv:property sv:name="jcr:primaryType" sv:type="Name">
-    <sv:value>frontend:plugin</sv:value>
-  </sv:property>
-  <sv:property sv:name="perspective.title" sv:type="String">
-    <sv:value>iframe-perspective-title</sv:value>
-  </sv:property>
-  <sv:property sv:name="plugin.class" sv:type="String">
-    <sv:value>org.onehippo.forge.iframeprspectiv.GenericIFramePerspective</sv:value>
-  </sv:property>
-  <sv:property sv:name="translator.id" sv:type="String">
-    <sv:value>service.translator.config</sv:value>
-  </sv:property>
-  <sv:property sv:name="wicket.id" sv:type="String">
-    <sv:value>service.tab</sv:value>
-  </sv:property>
-  <sv:property sv:name="iframe.src" sv:type="String">
-    <sv:value>/cms/examples/whoweare.jsp</sv:value>
-  </sv:property>
-  <sv:property sv:name="x-frame-options" sv:type="String">
-    <sv:value>ALLOW-FROM http://www.example.org</sv:value>
-  </sv:property>
-  <sv:node sv:name="layout.wireframe">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>frontend:pluginconfig</sv:value>
-    </sv:property>
-    <sv:property sv:name="center" sv:type="String">
-      <sv:value>id=generic-iframe-perspective-center,body=generic-iframe-perspective-center-body,scroll=true</sv:value>
-    </sv:property>
-    <sv:property sv:name="linked.with.parent" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
-    <sv:property sv:name="root.id" sv:type="String">
-      <sv:value>generic-iframe-perspective-wrapper</sv:value>
-    </sv:property>
-    <sv:property sv:name="top" sv:type="String">
-      <sv:value>id=generic-iframe-perspective-top,body=generic-iframe-perspective-top-body,height=35</sv:value>
-    </sv:property>
-  </sv:node>
-</sv:node>
+definitions:
+  config:
+    /hippo:configuration/hippo:frontend/cms/cms-static:
+      /example-iframe-perspective:
+        jcr:primaryType: frontend:plugin
+        jcr:mixinTypes: ['frontend:navigationitem']
+        frontend:appPath: example-iframe-perspective
+        hipposys:userrole: xm.cms.user
+        plugin.class: org.onehippo.forge.iframeprspectiv.GenericIFramePerspective
+        wicket.id: service.tab
+        iframe.src: https://bloomreach-forge.github.io/
+        x-frame-options: ALLOW-FROM http://www.example.org
+        /layout.wireframe:
+          jcr:primaryType: frontend:pluginconfig
+          center: id=generic-iframe-perspective-center,body=generic-iframe-perspective-center-body,scroll=true
+          linked.with.parent: true
+          root.id: generic-iframe-perspective-wrapper
+          top: id=generic-iframe-perspective-top,body=generic-iframe-perspective-top-body,height=35
+      /example-iframe-perspective-second:
+        jcr:primaryType: frontend:plugin
+        jcr:mixinTypes: ['frontend:navigationitem']
+        frontend:appPath: example-iframe-perspective-second
+        hipposys:userrole: xm.cms.user
+        plugin.class: org.onehippo.forge.iframeprspectiv.GenericIFramePerspective2
+        wicket.id: service.tab
+        iframe.src: https://bloomreach-forge.github.io/iframe-perspective/
+        x-frame-options: ALLOW-FROM http://www.example.org
+        /layout.wireframe:
+          jcr:primaryType: frontend:pluginconfig
+          center: id=generic-iframe-perspective-center,body=generic-iframe-perspective-center-body,scroll=true
+          linked.with.parent: true
+          root.id: generic-iframe-perspective-wrapper
+          top: id=generic-iframe-perspective-top,body=generic-iframe-perspective-top-body,height=35
         ]]></source>
         </div>
+
+        <p>
+          <em>Note:</em> Each perspective must have unique, mandatory <code>frontend:appPath</code> configurations like the above example.
+          See the
+          <a href="https://documentation.bloomreach.com/14/library/concepts/editor-interface/cms-perspectives.html">Create a Custom Perspective</a>
+          page for further detail.
+        </p>
+
+        <p>
+          Also, the translation key-value pairs for each perspective must be added to <code>/hippo:configuration/hippo:translations/hippo:navigation/navigationitem</code>
+          like the following example:
+        </p>
+
+        <div class="brush: plain">
+        <source><![CDATA[
+definitions:
+  config:
+    /hippo:configuration/hippo:translations/hippo:navigation/navigationitem/displayName/en:
+      example-iframe-perspective: Example IFrame Perspective
+      example-iframe-perspective-second: Example IFrame Perspective 2nd
+        ]]></source>
+        </div>
+
+        <p>
+          <em>Note:</em> The translation keys must be the same as the <code>frontend:appPath</code> property values.
+          See the
+          <a href="https://documentation.bloomreach.com/14/library/concepts/editor-interface/cms-perspectives.html">Create a Custom Perspective</a>
+          page for further detail.
+        </p>
+
       </subsection>
       <subsection name="Plugin Configuration Details">
         <p>You can configure the followings:</p>
@@ -171,41 +194,10 @@
             <th>Description</th>
           </tr>
           <tr>
-            <td>perspective.title</td>
-            <td>iframe-perspective-title</td>
-            <td>Generic IFrame Panel</td>
-            <td>
-              Resource bundle key in classpath:org/onehippo/forge/iframeprspectiv/GenericIFramePerspective*.properties
-              for the title for this perspective.
-              <BR/>
-              See <a href="#Setting_Perspective_Plugin_Title">Setting Perspective Plugin Title</a> section for detail.
-            </td>
-          </tr>
-          <tr>
             <td>iframe.src</td>
             <td>http://www.onehippo.org</td>
             <td></td>
             <td>The initial source of the IFrame element</td>
-          </tr>
-          <tr>
-            <td>icon-prefix</td>
-            <td>my-iframe-perspective-</td>
-            <td>generic-iframe-perspective-</td>
-            <td>
-              The prefix of the icon for this perspective.
-              For example, if the prefix of the icon is 'generic-iframe-perspective-' and the suffix is '.png', then
-              'classpath:/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective-32.png' resource will be used for the perspective icon.
-            </td>
-          </tr>
-          <tr>
-            <td>icon-suffix</td>
-            <td>.gif</td>
-            <td>.png</td>
-            <td>
-              The suffix of the icon for this perspective.
-              For example, if the prefix of the icon is 'generic-iframe-perspective-' and the suffix is '.png', then
-              'classpath:/org/onehippo/forge/iframeprspectiv/generic-iframe-perspective-32.png' resource will be used for the perspective icon.
-            </td>
           </tr>
           <tr>
             <td>x-frame-options</td>
@@ -264,39 +256,6 @@
             </td>
           </tr>
         </table>
-      </subsection>
-
-      <subsection name="Setting Perspective Plugin Title">
-
-        <p>
-          The <code>perspective.title</code> configuration parameter lets you customize the title of the IFrame perspective plugin.
-        </p>
-        <p>
-          If the parameter is set to "iframe-perspective-title" for example,
-          then the title of this perspective plugin will be read from the resource bundle value ("Generic IFrame Panel" by default)
-          found by the bundle key, "iframe-perspective-title".
-        </p>
-        <p>
-          Therefore, to customize the title of your IFrame perspective plugin, you should <i>shadow</i>
-          <code>classpath:org/onehippo/forge/iframeprspectiv/GenericIFramePerspective*.properties</code>
-          in your CMS web application project (cms/)
-          (e.g. add <code>cms/src/main/resources/org/onehippo/forge/iframeprspectiv/GenericIFramePerspective.properties</code>).
-        </p>
-        <p>
-          And add a resource bundle key ("iframe-perspective-title" or something else like "my-iframe-perspective-title" for example)
-          with a custom title string value like the following example:
-        </p>
-
-        <div class="brush: plain">
-        <source><![CDATA[
-# picked up when the parameter is set to "iframe-perspective-title"
-iframe-perspective-title=Generic IFrame Panel
-
-# picked up when the parameter is set to "my-iframe-perspective-title"
-my-iframe-perspective-title=My IFrame Panel
-        ]]></source>
-        </div>
-
       </subsection>
 
     </section>

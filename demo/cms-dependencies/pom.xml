@@ -15,6 +15,11 @@
 
     <dependency>
       <groupId>org.onehippo.forge.iframeprspectiv</groupId>
+      <artifactId>iframeprspectiv</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge.iframeprspectiv</groupId>
       <artifactId>iframeprspectiv-demo-repository-data-application</artifactId>
       <version>${project.version}</version>
     </dependency>

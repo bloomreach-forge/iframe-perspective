@@ -23,6 +23,10 @@
           <th>Hippo CMS Release version</th>
         </tr>
         <tr>
+          <td>5.x</td>
+          <td>14.x</td>
+        </tr>
+        <tr>
           <td>4.x</td>
           <td>13.x</td>
         </tr>
@@ -39,6 +43,14 @@
           <td>7.9.x</td>
         </tr>
       </table>
+    </section>
+    <section name="Release Notes (5.x)">
+      <subsection name="5.0.0">
+        <ul>
+          <li>[<a href='https://issues.onehippo.com/browse/HIPFORGE-346'>HIPFORGE-346</a>] -         [IFramePerspective] Upgrade IFrame Perspective Plugin for v14
+          </li>
+        </ul>
+      </subsection>
     </section>
     <section name="Release Notes (4.x)">
       <subsection name="4.0.1">
