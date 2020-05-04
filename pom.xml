@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
   Copyright 2011-2020 Hippo
 
   Licensed under the Apache License, Version 2.0 (the  "License");
@@ -18,8 +19,8 @@
 
   <name>IFramePerspective</name>
   <description>IFrame Perspective Plugin</description>
-  <groupId>org.onehippo.forge.iframeprspectiv</groupId>
-  <artifactId>iframeprspectiv</artifactId>
+  <groupId>org.bloomreach.forge.iframeperspective</groupId>
+  <artifactId>iframeperspective</artifactId>
   <version>5.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <url>https://bloomreach-forge.github.io/iframe-perspective/</url>
@@ -71,13 +72,23 @@
     <developer>
       <name>Woonsan Ko</name>
       <id>wko</id>
-      <email>w.ko @ onehippo . com</email>
-      <organization>Hippo</organization>
+      <email>woonsan.ko @ bloomreach . com</email>
+      <organization>Bloomreach</organization>
       <roles>
         <role>Project Lead</role>
         <role>Java Developer</role>
       </roles>
       <timezone>-5</timezone>
+    </developer>
+    <developer>
+      <name>Jeroen Hoffman</name>
+      <id>wko</id>
+      <email>jeroen.hoffman @ bloomreach . com</email>
+      <organization>Bloomreach</organization>
+      <roles>
+        <role>Java Developer</role>
+      </roles>
+      <timezone>+1</timezone>
     </developer>
   </developers>
 
