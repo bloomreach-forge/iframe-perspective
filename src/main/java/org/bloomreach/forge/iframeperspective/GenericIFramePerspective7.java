@@ -13,19 +13,19 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.onehippo.forge.iframeperspective;
+package org.bloomreach.forge.iframeperspective;
 
 import org.hippoecm.frontend.plugin.IPluginContext;
 import org.hippoecm.frontend.plugin.config.IPluginConfig;
 
 /**
  * Convenient class providing the same functionality as {@link GenericIFramePerspective} when configuring the
- * sixth {@link GenericIFramePerspective} based extension perspective only through configuration.
+ * seventh {@link GenericIFramePerspective} based extension perspective only through configuration.
  */
 @SuppressWarnings("serial")
-public class GenericIFramePerspective6 extends GenericIFramePerspective {
+public class GenericIFramePerspective7 extends GenericIFramePerspective {
 
-    public GenericIFramePerspective6(IPluginContext context, IPluginConfig config) {
+    public GenericIFramePerspective7(IPluginContext context, IPluginConfig config) {
         super(context, config);
     }
 
