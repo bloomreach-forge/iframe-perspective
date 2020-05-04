@@ -27,7 +27,7 @@
       <subsection name="Security Considerations">
         <p>
           By default, Hippo CMS web application doesn't allow to navigate a URL from a different origin
-          in the <strong>iframeprspectiv</strong> plugin.
+          in the <strong>iframeperspective</strong> plugin.
         </p>
         <p>
           If you want to allow some specific known sites to be navigated in the plugin,

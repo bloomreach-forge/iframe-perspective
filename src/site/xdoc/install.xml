@@ -55,7 +55,7 @@
         <p>In the main <code>pom.xml</code> of the project, in the properties section, add this property. For the correct version number, check the <a href="release-notes.html">Release Notes</a> page.</p>
         <div class="brush: xml">
           <source><![CDATA[
-    <forge.iframeprspectiv.version>version.number</forge.iframeprspectiv.version>
+    <bloomreach.forge.iframeperspectiv.version>version.number</bloomreach.forge.iframeperspective.version>
         ]]></source>
         </div>
       </subsection>
@@ -74,12 +74,12 @@
 
     <!-- SNIP -->
 
-    <!-- NOTE: You should set a property named 'forge.iframeprspectiv.version' to a version of this plugin! -->
+    <!-- NOTE: You should set a property named 'bloomreach.forge.iframeperspective.version' to a version of this plugin! -->
 
     <dependency>
-      <groupId>org.onehippo.forge.iframeprspectiv</groupId>
-      <artifactId>iframeprspectiv</artifactId>
-      <version>${forge.iframeprspectiv.version}</version>
+      <groupId>org.bloomreach.forge.iframeperspective</groupId>
+      <artifactId>iframeperspective</artifactId>
+      <version>${bloomreach.forge.iframeperspective.version}</version>
     </dependency>
 
     <!-- SNIP -->
@@ -104,8 +104,8 @@
     <!-- SNIP -->
 
     <dependency>
-      <groupId>org.onehippo.forge.iframeprspectiv</groupId>
-      <artifactId>iframeprspectiv</artifactId>
+      <groupId>org.bloomreach.forge.iframeperspective</groupId>
+      <artifactId>iframeperspective</artifactId>
     </dependency>
 
     <!-- SNIP -->
@@ -134,7 +134,7 @@ definitions:
         jcr:mixinTypes: ['frontend:navigationitem']
         frontend:appPath: example-iframe-perspective
         hipposys:userrole: xm.cms.user
-        plugin.class: org.onehippo.forge.iframeperspective.GenericIFramePerspective
+        plugin.class: org.bloomreach.forge.iframeperspective.GenericIFramePerspective
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/
         x-frame-options: ALLOW-FROM http://www.example.org
@@ -149,7 +149,7 @@ definitions:
         jcr:mixinTypes: ['frontend:navigationitem']
         frontend:appPath: example-iframe-perspective-second
         hipposys:userrole: xm.cms.user
-        plugin.class: org.onehippo.forge.iframeperspective.GenericIFramePerspective2
+        plugin.class: org.bloomreach.forge.iframeperspective.GenericIFramePerspective2
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/iframe-perspective/
         x-frame-options: ALLOW-FROM http://www.example.org
@@ -172,10 +172,10 @@ definitions:
         <p>
           <em>Note:</em> Also, note that the CMS UI does not support multiple custom perspective plugin configurations
           with the same <code>plugin.class</code> property value. That's why the second example shown above is set to use
-          <code>org.onehippo.forge.iframeperspective.GenericIFramePerspective2</code> instead.
+          <code>org.bloomreach.forge.iframeperspective.GenericIFramePerspective2</code> instead.
           For convenience, this project provides 9 different class names for the same feature
-          (<code>org.onehippo.forge.iframeperspective.GenericIFramePerspective2</code> ~ <code>org.onehippo.forge.iframeperspective.GenericIFramePerspective10</code>).
-          This allows developers to avoid adding a custom class extending <code>org.onehippo.forge.iframeperspective.GenericIFramePerspective</code>
+          (<code>org.bloomreach.forge.iframeperspective.GenericIFramePerspective2</code> ~ <code>org.bloomreach.forge.iframeperspective.GenericIFramePerspective10</code>).
+          This allows developers to avoid adding a custom class extending <code>org.bloomreach.forge.iframeperspective.GenericIFramePerspective</code>
           in their projects.
         </p>
 
