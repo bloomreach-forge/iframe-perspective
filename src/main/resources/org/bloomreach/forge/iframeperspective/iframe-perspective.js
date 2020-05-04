@@ -15,12 +15,12 @@
  */
 (function() {
 
-    if (typeof GenericIFramePerspective == 'undefined') {
-        GenericIFramePerspective = new Object();
-        GenericIFramePerspective.resizeEventRegisteredMap = [];
+    if (typeof IFramePerspective == 'undefined') {
+        IFramePerspective = new Object();
+        IFramePerspective.resizeEventRegisteredMap = [];
     }
 
-    GenericIFramePerspective.getWindowSize = function() {
+    IFramePerspective.getWindowSize = function() {
         var width = 0;
         var height = 0;
         if (typeof(window.innerWidth) == 'number') {
@@ -36,7 +36,7 @@
         return [ width, height ];
     };
 
-    GenericIFramePerspective.addEvent = function(elem, type, eventHandle) {
+    IFramePerspective.addEvent = function(elem, type, eventHandle) {
         if (elem == null || elem == undefined) return;
         if (elem.addEventListener) {
             elem.addEventListener(type, eventHandle, false);
@@ -45,19 +45,19 @@
         }
     };
 
-    GenericIFramePerspective.resizeIFrame = function(id) {
+    IFramePerspective.resizeIFrame = function(id) {
         var iframe = Wicket.$(id);
         if (iframe) {
-            var windowSize = GenericIFramePerspective.getWindowSize();
+            var windowSize = IFramePerspective.getWindowSize();
             iframe.height = windowSize[1] - 76;
         }
     };
 
-    GenericIFramePerspective.showIFrame = function(id) {
-        GenericIFramePerspective.resizeIFrame(id);
-        if (!GenericIFramePerspective.resizeEventRegisteredMap[id]) {
-            GenericIFramePerspective.addEvent(window, "resize", function() { GenericIFramePerspective.resizeIFrame(id); } );
-            GenericIFramePerspective.resizeEventRegisteredMap[id] = true;
+    IFramePerspective.showIFrame = function(id) {
+        IFramePerspective.resizeIFrame(id);
+        if (!IFramePerspective.resizeEventRegisteredMap[id]) {
+            IFramePerspective.addEvent(window, "resize", function() { IFramePerspective.resizeIFrame(id); } );
+            IFramePerspective.resizeEventRegisteredMap[id] = true;
         }
     };
 

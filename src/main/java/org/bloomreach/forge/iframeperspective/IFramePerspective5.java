@@ -19,13 +19,13 @@ import org.hippoecm.frontend.plugin.IPluginContext;
 import org.hippoecm.frontend.plugin.config.IPluginConfig;
 
 /**
- * Convenient class providing the same functionality as {@link GenericIFramePerspective} when configuring the
- * seventh {@link GenericIFramePerspective} based extension perspective only through configuration.
+ * Convenient class providing the same functionality as {@link IFramePerspective} when configuring the
+ * fifth {@link IFramePerspective} based extension perspective only through configuration.
  */
 @SuppressWarnings("serial")
-public class GenericIFramePerspective7 extends GenericIFramePerspective {
+public class IFramePerspective5 extends IFramePerspective {
 
-    public GenericIFramePerspective7(IPluginContext context, IPluginConfig config) {
+    public IFramePerspective5(IPluginContext context, IPluginConfig config) {
         super(context, config);
     }
 

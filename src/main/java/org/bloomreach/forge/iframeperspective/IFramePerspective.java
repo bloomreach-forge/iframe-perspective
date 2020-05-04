@@ -38,12 +38,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @SuppressWarnings("serial")
-public class GenericIFramePerspective extends Perspective {
+public class IFramePerspective extends Perspective {
 
-    private static Logger log = LoggerFactory.getLogger(GenericIFramePerspective.class);
+    private static Logger log = LoggerFactory.getLogger(IFramePerspective.class);
 
-    private static final ResourceReference GENERIC_IFRAME_CSS = new CssResourceReference(GenericIFramePerspective.class, "generic-iframe-perspective.css");
-    private static final ResourceReference GENERIC_IFRAME_JS = new JavaScriptResourceReference(GenericIFramePerspective.class, "generic-iframe-perspective.js");
+    private static final ResourceReference IFRAME_CSS = new CssResourceReference(IFramePerspective.class, "iframe-perspective.css");
+    private static final ResourceReference IFRAME_JS = new JavaScriptResourceReference(IFramePerspective.class, "iframe-perspective.js");
 
     private static final String IFRAME_ATTRIBUTE_PREFIX = "iframe.";
 
@@ -76,11 +76,11 @@ public class GenericIFramePerspective extends Perspective {
 
     private final WebMarkupContainer iframe;
 
-    public GenericIFramePerspective(IPluginContext context, IPluginConfig config) {
+    public IFramePerspective(IPluginContext context, IPluginConfig config) {
         super(context, config);
         setOutputMarkupId(true);
 
-        iframe = new WebMarkupContainer("generic-perspective-iframe");
+        iframe = new WebMarkupContainer("perspective-iframe");
         iframe.setOutputMarkupId(true);
 
         xFrameOptions = StringUtils.trim(config.getString("x-frame-options", null));
@@ -131,8 +131,8 @@ public class GenericIFramePerspective extends Perspective {
 
     @Override
     public void renderHead(IHeaderResponse response) {
-        response.render(CssHeaderItem.forReference(GENERIC_IFRAME_CSS));
-        response.render(JavaScriptHeaderItem.forReference(GENERIC_IFRAME_JS));
-        response.render(OnDomReadyHeaderItem.forScript("GenericIFramePerspective.showIFrame(\"" + iframe.getMarkupId() + "\");"));
+        response.render(CssHeaderItem.forReference(IFRAME_CSS));
+        response.render(JavaScriptHeaderItem.forReference(IFRAME_JS));
+        response.render(OnDomReadyHeaderItem.forScript("IFramePerspective.showIFrame(\"" + iframe.getMarkupId() + "\");"));
     }
 }
