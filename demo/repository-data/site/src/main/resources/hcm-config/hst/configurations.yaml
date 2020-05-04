@@ -19,6 +19,6 @@ definitions:
           jcr:primaryType: hst:sitemapitemhandlers
         /hst:catalog:
           jcr:primaryType: hst:catalog
-      /iframeprspectivdemo:
+      /iframeperspectivedemo:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

@@ -1,5 +1,5 @@
 group: 
-  name: iframeprspectiv-demo
-project: iframeprspectiv-demo
+  name: iframeperspective-demo
+project: iframeperspective-demo
 module:
-  name: iframeprspectiv-demo-repository-data-webfiles
+  name: iframeperspective-demo-repository-data-webfiles

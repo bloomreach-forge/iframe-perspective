@@ -3,14 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.onehippo.forge.iframeprspectiv</groupId>
-    <artifactId>iframeprspectiv-demo-repository-data</artifactId>
+    <groupId>org.bloomreach.forge.iframeperspective</groupId>
+    <artifactId>iframeperspective-demo-repository-data</artifactId>
     <version>5.0.0-SNAPSHOT</version>
   </parent>
 
   <name>IFrame Perspective Plugin Demo Repository Data For Application</name>
   <description>IFrame Perspective Plugin Demo Repository Data For Application</description>
-  <artifactId>iframeprspectiv-demo-repository-data-application</artifactId>
+  <artifactId>iframeperspective-demo-repository-data-application</artifactId>
 
   <build>
     <defaultGoal>install</defaultGoal>

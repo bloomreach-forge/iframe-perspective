@@ -1,6 +1,6 @@
 <#include "../include/imports.ftl">
 
-<#-- @ftlvariable name="item" type="org.onehippo.forge.iframeprspectiv.demo.beans.NewsDocument" -->
+<#-- @ftlvariable name="item" type="org.bloomreach.forge.iframeperspective.demo.beans.NewsDocument" -->
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
 <#if pageable?? && pageable.items?has_content>
 <div>

@@ -18,7 +18,7 @@ This additional profile will modify the target location for the development modu
 it won't be seen and picked up during the repository bootstrap process.
 
 Access the Bloomreach setup application at <http://localhost:8080/essentials>.
-After your project is set up, access the CMS at <http://localhost:8080/cms> and the site at <http://localhost:8080/iframeprspectivdemo>.
+After your project is set up, access the CMS at <http://localhost:8080/cms> and the site at <http://localhost:8080/iframeperspectivedemo>.
 Logs are located in target/tomcat9x/logs
 
 
@@ -87,7 +87,7 @@ Then build the brXM docker image:
     mvn -Pdocker.build
 
 This maven profile will create a docker image and add it to the local docker registry. The new image will be tagged
-as org.onehippo.forge.iframeprspectiv/iframeprspectiv-demo:5.0.0-SNAPSHOT
+as org.bloomreach.forge.iframeperspective/iframeperspective-demo:5.0.0-SNAPSHOT
 
 To run the image with in-memory h2 database:
 

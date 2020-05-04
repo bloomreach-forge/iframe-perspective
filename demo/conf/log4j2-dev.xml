@@ -137,7 +137,7 @@
     </Logger>
 
     <!-- project logging -->
-    <Logger name="org.onehippo.forge.iframeprspectiv.demo" level="debug"/>
+    <Logger name="org.bloomreach.forge.iframeperspective.demo" level="debug"/>
 
     <Root level="warn">
       <AppenderRef ref="site"/>

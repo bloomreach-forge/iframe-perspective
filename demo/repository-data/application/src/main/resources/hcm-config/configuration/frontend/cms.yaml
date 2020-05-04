@@ -6,7 +6,7 @@ definitions:
         jcr:mixinTypes: ['frontend:navigationitem']
         frontend:appPath: example-iframe-perspective
         hipposys:userrole: xm.cms.user
-        plugin.class: org.onehippo.forge.iframeprspectiv.GenericIFramePerspective
+        plugin.class: org.bloomreach.forge.iframeperspective.GenericIFramePerspective
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/
         x-frame-options: ALLOW-FROM http://www.example.org
@@ -21,7 +21,7 @@ definitions:
         jcr:mixinTypes: ['frontend:navigationitem']
         frontend:appPath: example-iframe-perspective-second
         hipposys:userrole: xm.cms.user
-        plugin.class: org.onehippo.forge.iframeprspectiv.GenericIFramePerspective2
+        plugin.class: org.bloomreach.forge.iframeperspective.GenericIFramePerspective2
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/iframe-perspective/
         x-frame-options: ALLOW-FROM http://www.example.org

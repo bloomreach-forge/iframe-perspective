@@ -1,5 +1,5 @@
 definitions:
   namespace:
-    iframeprspectivdemo:
-      uri: http://www.iframeprspectivdemo.com/iframeprspectivdemo/nt/1.0
-      cnd: namespaces/iframeprspectiv-demo.cnd
+    iframeperspectivedemo:
+      uri: http://www.iframeperspectivedemo.com/iframeperspectivedemo/nt/1.0
+      cnd: namespaces/iframeperspective-demo.cnd

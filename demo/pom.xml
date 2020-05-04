@@ -10,8 +10,8 @@
 
   <name>IFrame Perspective Plugin Demo</name>
   <description>IFrame Perspective Plugin Demo</description>
-  <groupId>org.onehippo.forge.iframeprspectiv</groupId>
-  <artifactId>iframeprspectiv-demo</artifactId>
+  <groupId>org.bloomreach.forge.iframeperspective</groupId>
+  <artifactId>iframeperspective-demo</artifactId>
   <version>5.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -63,7 +63,7 @@
     <!--***START temporary override of versions*** -->
     <!-- ***END temporary override of versions*** -->
 
-    <forge.iframeprspectiv.version>${project.version}</forge.iframeprspectiv.version>
+    <forge.iframeperspective.version>${project.version}</forge.iframeperspective.version>
 
     <essentials.version>14.1.0</essentials.version>
     <jsp-api.version>2.2</jsp-api.version>
@@ -94,9 +94,9 @@
     <dependencies>
 
       <dependency>
-        <groupId>org.onehippo.forge.iframeprspectiv</groupId>
-        <artifactId>iframeprspectiv</artifactId>
-        <version>${forge.iframeprspectiv.version}</version>
+        <groupId>org.bloomreach.forge.iframeperspective</groupId>
+        <artifactId>iframeperspective</artifactId>
+        <version>${forge.iframeperspective.version}</version>
       </dependency>
 
       <dependency>
@@ -256,7 +256,7 @@
         <docker.db.bind.1>${project.basedir}/target/mysql-data:/var/lib/mysql</docker.db.bind.1>
         <docker.db.bind.2>${project.basedir}/db-bootstrap:/docker-entrypoint-initdb.d</docker.db.bind.2>
 
-        <docker.brxm.envRun.MYSQL_DB_HOST>${docker.container.db.net.iframeprspectiv-demo-network.ip}</docker.brxm.envRun.MYSQL_DB_HOST>
+        <docker.brxm.envRun.MYSQL_DB_HOST>${docker.container.db.net.iframeperspective-demo-network.ip}</docker.brxm.envRun.MYSQL_DB_HOST>
       </properties>
     </profile>
 
@@ -270,7 +270,7 @@
         <docker.db.bind.1>${project.basedir}/target/postgres-data:/var/lib/postgresql/data</docker.db.bind.1>
         <docker.db.bind.2>${project.basedir}/db-bootstrap:/docker-entrypoint-initdb.d</docker.db.bind.2>
 
-        <docker.brxm.envRun.POSTGRES_DB_HOST>${docker.container.db.net.iframeprspectiv-demo-network.ip}</docker.brxm.envRun.POSTGRES_DB_HOST>
+        <docker.brxm.envRun.POSTGRES_DB_HOST>${docker.container.db.net.iframeperspective-demo-network.ip}</docker.brxm.envRun.POSTGRES_DB_HOST>
       </properties>
     </profile>
 
@@ -311,11 +311,11 @@
                 </configfiles>
                 <files>
                   <file>
-                    <file>${project.basedir}/repository-data/development/target/iframeprspectiv-demo-repository-data-development-${project.version}.jar</file>
+                    <file>${project.basedir}/repository-data/development/target/iframeperspective-demo-repository-data-development-${project.version}.jar</file>
                     <todir>${development-module-deploy-dir}</todir>
                   </file>
                   <file>
-                    <file>${project.basedir}/repository-data/site-development/target/iframeprspectiv-demo-repository-data-site-development-${project.version}.jar</file>
+                    <file>${project.basedir}/repository-data/site-development/target/iframeperspective-demo-repository-data-site-development-${project.version}.jar</file>
                     <todir>${development-module-deploy-dir}</todir>
                   </file>
                 </files>
