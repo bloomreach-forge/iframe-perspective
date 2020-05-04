@@ -16,6 +16,7 @@
 package org.onehippo.forge.iframeprspectiv;
 
 import org.apache.commons.lang.StringUtils;
+
 import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
@@ -28,10 +29,11 @@ import org.apache.wicket.request.http.WebResponse;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.JavaScriptResourceReference;
 import org.apache.wicket.request.resource.ResourceReference;
-import org.hippoecm.frontend.dialog.IDialogService;
+
 import org.hippoecm.frontend.plugin.IPluginContext;
 import org.hippoecm.frontend.plugin.config.IPluginConfig;
 import org.hippoecm.frontend.plugins.standards.perspective.Perspective;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -132,9 +134,5 @@ public class GenericIFramePerspective extends Perspective {
         response.render(CssHeaderItem.forReference(GENERIC_IFRAME_CSS));
         response.render(JavaScriptHeaderItem.forReference(GENERIC_IFRAME_JS));
         response.render(OnDomReadyHeaderItem.forScript("GenericIFramePerspective.showIFrame(\"" + iframe.getMarkupId() + "\");"));
-    }
-
-    public void showDialog(IDialogService.Dialog dialog) {
-        getPluginContext().getService(IDialogService.class.getName(), IDialogService.class).show(dialog);
     }
 }
