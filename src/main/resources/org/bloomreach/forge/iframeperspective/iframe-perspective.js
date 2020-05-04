@@ -49,7 +49,7 @@
         var iframe = Wicket.$(id);
         if (iframe) {
             var windowSize = IFramePerspective.getWindowSize();
-            iframe.height = windowSize[1] - 76;
+            iframe.height = windowSize[1];
         }
     };
 
