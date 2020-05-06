@@ -9,12 +9,6 @@ definitions:
         plugin.class: org.bloomreach.forge.iframeperspective.IFramePerspective
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/
-        /layout.wireframe:
-          jcr:primaryType: frontend:pluginconfig
-          center: id=generic-iframe-perspective-center,body=generic-iframe-perspective-center-body,scroll=true
-          linked.with.parent: true
-          root.id: generic-iframe-perspective-wrapper
-          top: id=generic-iframe-perspective-top,body=generic-iframe-perspective-top-body,height=35
       /example-iframe-perspective-second:
         jcr:primaryType: frontend:plugin
         jcr:mixinTypes: ['frontend:navigationitem']
@@ -23,9 +17,3 @@ definitions:
         plugin.class: org.bloomreach.forge.iframeperspective.IFramePerspective2
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/iframe-perspective/
-        /layout.wireframe:
-          jcr:primaryType: frontend:pluginconfig
-          center: id=generic-iframe-perspective-center,body=generic-iframe-perspective-center-body,scroll=true
-          linked.with.parent: true
-          root.id: generic-iframe-perspective-wrapper
-          top: id=generic-iframe-perspective-top,body=generic-iframe-perspective-top-body,height=35
