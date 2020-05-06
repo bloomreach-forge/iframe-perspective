@@ -9,7 +9,6 @@ definitions:
         plugin.class: org.bloomreach.forge.iframeperspective.IFramePerspective
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/
-        x-frame-options: ALLOW-FROM http://www.example.org
         /layout.wireframe:
           jcr:primaryType: frontend:pluginconfig
           center: id=generic-iframe-perspective-center,body=generic-iframe-perspective-center-body,scroll=true
@@ -24,7 +23,6 @@ definitions:
         plugin.class: org.bloomreach.forge.iframeperspective.IFramePerspective2
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/iframe-perspective/
-        x-frame-options: ALLOW-FROM http://www.example.org
         /layout.wireframe:
           jcr:primaryType: frontend:pluginconfig
           center: id=generic-iframe-perspective-center,body=generic-iframe-perspective-center-body,scroll=true
