@@ -21,7 +21,7 @@
   <description>Bloomreach Forge IFramePerspective Plugin</description>
   <groupId>org.bloomreach.forge.iframeperspective</groupId>
   <artifactId>iframeperspective</artifactId>
-  <version>5.0.0-SNAPSHOT</version>
+  <version>5.0.0</version>
   <packaging>jar</packaging>
   <url>https://bloomreach-forge.github.io/iframe-perspective/</url>
 
