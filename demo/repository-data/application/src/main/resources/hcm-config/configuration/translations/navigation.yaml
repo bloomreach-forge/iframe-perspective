@@ -1,0 +1,5 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:translations/hippo:navigation/navigationitem/displayName/en:
+      example-iframe-perspective: Example IFrame Perspective
+      example-iframe-perspective-second: Example IFrame Perspective 2nd

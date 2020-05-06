@@ -7,13 +7,13 @@
     <developmentSubModule>development</developmentSubModule>
     <enterprise>false</enterprise>
     <extraTemplates>true</extraTemplates>
-    <hstRoot>/hst:iframeprspectivdemo</hstRoot>
-    <projectNamespace>iframeprspectivdemo</projectNamespace>
+    <hstRoot>/hst:iframeperspectivedemo</hstRoot>
+    <projectNamespace>iframeperspectivedemo</projectNamespace>
     <repositoryDataModule>repository-data</repositoryDataModule>
-    <selectedBeansPackage>org.onehippo.forge.iframeprspectiv.demo.beans</selectedBeansPackage>
-    <selectedComponentsPackage>org.onehippo.forge.iframeprspectiv.demo.components</selectedComponentsPackage>
-    <selectedProjectPackage>org.onehippo.forge.iframeprspectiv.demo</selectedProjectPackage>
-    <selectedRestPackage>org.onehippo.forge.iframeprspectiv.demo.rest</selectedRestPackage>
+    <selectedBeansPackage>org.bloomreach.forge.iframeperspective.demo.beans</selectedBeansPackage>
+    <selectedComponentsPackage>org.bloomreach.forge.iframeperspective.demo.components</selectedComponentsPackage>
+    <selectedProjectPackage>org.bloomreach.forge.iframeperspective.demo</selectedProjectPackage>
+    <selectedRestPackage>org.bloomreach.forge.iframeperspective.demo.rest</selectedRestPackage>
     <setupDone>true</setupDone>
     <siteContextPath>/site</siteContextPath>
     <siteModule>site</siteModule>

@@ -1,5 +1,5 @@
 definitions:
   config:
-    /hst:hst/hst:sites/iframeprspectivdemo:
+    /hst:hst/hst:sites/iframeperspectivedemo:
       jcr:primaryType: hst:site
-      hst:content: /content/documents/iframeprspectivdemo
+      hst:content: /content/documents/iframeperspectivedemo

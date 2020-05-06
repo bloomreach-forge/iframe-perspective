@@ -1,0 +1,15 @@
+<'iframeperspectivedemo'='http://www.iframeperspectivedemo.com/iframeperspectivedemo/nt/1.0'>
+<'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0.4'>
+<'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
+<'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
+<'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
+
+[iframeperspectivedemo:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
+  orderable
+
+[iframeperspectivedemo:eventsdocument] > hippostd:relaxed, hippotranslation:translated, iframeperspectivedemo:basedocument
+  orderable
+
+[iframeperspectivedemo:newsdocument] > hippostd:relaxed, hippotranslation:translated, iframeperspectivedemo:basedocument
+  orderable
+

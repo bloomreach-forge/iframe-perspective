@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
-  Copyright 2011-2018 Hippo
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2011-2020 Hippo
 
   Licensed under the Apache License, Version 2.0 (the  "License");
   you may not use this file except in compliance with the License.
@@ -16,11 +17,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <name>IFramePerspective</name>
-  <description>IFrame Perspective Plugin</description>
-  <groupId>org.onehippo.forge.iframeprspectiv</groupId>
-  <artifactId>iframeprspectiv</artifactId>
-  <version>4.0.1</version>
+  <name>Bloomreach Forge IFramePerspective Plugin</name>
+  <description>Bloomreach Forge IFramePerspective Plugin</description>
+  <groupId>org.bloomreach.forge.iframeperspective</groupId>
+  <artifactId>iframeperspective</artifactId>
+  <version>5.0.0</version>
   <packaging>jar</packaging>
   <url>https://bloomreach-forge.github.io/iframe-perspective/</url>
 
@@ -29,7 +30,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.javaVersion>1.8</project.build.javaVersion>
 
-    <hippo.cms.version>13.0.0</hippo.cms.version>
+    <hippo.cms.version>14.1.0</hippo.cms.version>
 
     <lib.junit.version>4.12</lib.junit.version>
     <lib.easymock.version>3.4</lib.easymock.version>
@@ -71,13 +72,23 @@
     <developer>
       <name>Woonsan Ko</name>
       <id>wko</id>
-      <email>w.ko @ onehippo . com</email>
-      <organization>Hippo</organization>
+      <email>woonsan.ko @ bloomreach . com</email>
+      <organization>Bloomreach</organization>
       <roles>
         <role>Project Lead</role>
         <role>Java Developer</role>
       </roles>
       <timezone>-5</timezone>
+    </developer>
+    <developer>
+      <name>Jeroen Hoffman</name>
+      <id>wko</id>
+      <email>jeroen.hoffman @ bloomreach . com</email>
+      <organization>Bloomreach</organization>
+      <roles>
+        <role>Java Developer</role>
+      </roles>
+      <timezone>+1</timezone>
     </developer>
   </developers>
 

@@ -1,15 +1,17 @@
-<?xml version="1.0"?><!--
-    Copyright 2011 Hippo Licensed under the Apache License, Version 2.0
-    (the "License"); you may not use this file except in compliance with
+<?xml version="1.0"?>
+<!--
+    Copyright 2010-2020 Bloomreach Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
     the License. You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0 Unless required by
-    applicable law or agreed to in writing, software distributed under
-    the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
-    OR CONDITIONS OF ANY KIND, either express or implied. See the
-    License for the specific language governing permissions and
-    limitations under the License.
-  --><!DOCTYPE document PUBLIC "-//Apache Software Foundation//DTD XDOC 1.0//EN"
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on
+    an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
+    specific language governing permissions and limitations under the License.
+  -->
+<!DOCTYPE document PUBLIC "-//Apache Software Foundation//DTD XDOC 1.0//EN"
   "http://maven.apache.org/dtd/xdoc_1_0.dtd">
 <document>
   <properties>
@@ -20,7 +22,11 @@
       <table>
         <tr>
           <th>Plugin version</th>
-          <th>Hippo CMS Release version</th>
+          <th>Bloomreach XM version</th>
+        </tr>
+        <tr>
+          <td>5.x</td>
+          <td>14.x</td>
         </tr>
         <tr>
           <td>4.x</td>
@@ -40,45 +46,55 @@
         </tr>
       </table>
     </section>
-    <section name="Release Notes (4.x)">
-      <subsection name="4.0.1">
+    <section name="Release Notes">
+      <subsection name="5.0.0">
+        <p class="smallinfo">Release date: 6 May 2020</p>
         <ul>
-          <li>[<a href='https://issues.onehippo.com/browse/HIPFORGE-285'>HIPFORGE-285</a>] -         [IFramePerspective] It's not possible to set the plugin title
+          <li><a href='https://issues.onehippo.com/browse/HIPFORGE-346'>HIPFORGE-346</a><br/>
+            Upgrade for compatibility with Experience Manager 14.<br/>
+            There are changes in the Maven coordinates, in the main perspective class name and in the way it is
+            configured. When upgrading, please do revisit <a href="install.html">the installation page</a>.
+          </li>
+        </ul>
+      </subsection>
+      <subsection name="4.0.1">
+        <p class="smallinfo">Release date: 28 May 2019</p>
+        <ul>
+          <li><a href='https://issues.onehippo.com/browse/HIPFORGE-285'>HIPFORGE-285</a><br/>
+            Add possibility to set the plugin title.
           </li>
         </ul>
       </subsection>
       <subsection name="4.0.0">
+        <p class="smallinfo">Release date: 19 January 2019</p>
         <ul>
-          <li>[<a href='https://issues.onehippo.com/browse/HIPFORGE-255'>HIPFORGE-255</a>] -         [IFramePerspective] Upgrade for v13 compatibility
+          <li><a href='https://issues.onehippo.com/browse/HIPFORGE-255'>HIPFORGE-255</a><br/>
+            Upgrade for compatibility with Experience Manager 13.
           </li>
         </ul>
       </subsection>
-    </section>
-    <section name="Release Notes (3.x)">
       <subsection name="3.0.1">
         <ul>
-          <li>[<a href='https://issues.onehippo.com/browse/HIPFORGE-194'>HIPFORGE-194</a>] -         [IFramePerspective] Upgrade demo on the latest 12.x
+          <li><a href='https://issues.onehippo.com/browse/HIPFORGE-194'>HIPFORGE-194</a><br/>
+            Upgrade demo on the latest 12.x.
           </li>
         </ul>
       </subsection>
       <subsection name="3.0.0">
         <ul>
-          <li>Compatible with Hippo CMS 12</li>
+          <li>Compatible with Hippo CMS 12.</li>
         </ul>
       </subsection>
-    </section>
-    <section name="Release Notes (2.x)">
       <subsection name="2.1.0">
         <ul>
           <li>Compatible with Hippo CMS 10</li>
         </ul>
       </subsection>
-    </section>
-    <section name="Release Notes (1.x)">
       <subsection name="1.03.00">
         <ul>
           <li>Upgrade to be compatible with 7.9.</li>
-          <li>Support IFrame related security headers (X-Frame-Options, Content-Security-Policy, X-Content-Security-Policy, X-Webkit-CSP).</li>
+          <li>Support IFrame related security headers X-Frame-Options, Content-Security-Policy,
+            X-Content-Security-Policy and X-Webkit-CSP.</li>
         </ul>
       </subsection>
       <subsection name="1.02.00">

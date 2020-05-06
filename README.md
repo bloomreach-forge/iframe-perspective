@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/bloomreach-forge/iframe-perspective.svg?branch=develop)](https://travis-ci.org/bloomreach-forge/iframe-perspective)
 
-# Hippo IFrame Perspective Plugin
+# Bloomreach IFrame Perspective Plugin
 
 The IFrame Perspective Plugin privides an IFrame based CMS Perspective Plugin, with keeping the navigation states of the IFrame element.
 

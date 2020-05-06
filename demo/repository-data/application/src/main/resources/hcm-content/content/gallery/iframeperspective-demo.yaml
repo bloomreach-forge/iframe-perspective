@@ -1,0 +1,7 @@
+/content/gallery/iframeperspectivedemo:
+  jcr:primaryType: hippogallery:stdImageGallery
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 7c827ec8-cdcd-42c8-8239-b58c315e159c
+  hippo:name: IFrame Perspective Plugin Demo
+  hippostd:foldertype: [new-image-folder]
+  hippostd:gallerytype: ['hippogallery:imageset']

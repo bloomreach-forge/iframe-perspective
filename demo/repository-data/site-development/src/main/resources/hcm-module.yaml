@@ -1,0 +1,6 @@
+site: iframeperspective-demo
+group: iframeperspective-demo
+project: iframeperspective-demo
+module:
+  name: iframeperspective-demo-repository-data-site-development
+  after: iframeperspective-demo-repository-data-site

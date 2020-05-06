@@ -1,6 +1,0 @@
-definitions:
-  config:
-    /hippo:namespaces/iframeprspectivdemo:
-      jcr:primaryType: hipposysedit:namespace
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: b6ce319b-1818-416e-8cb6-ad94ff9e4379

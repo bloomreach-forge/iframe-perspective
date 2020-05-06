@@ -1,0 +1,4 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/iframeperspectivedemo/hst:workspace:
+      jcr:primaryType: hst:workspace
