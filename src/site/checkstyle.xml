@@ -3,7 +3,7 @@
     "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
     "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 <!--
-  Copyright 2011 Hippo
+  Copyright 2011-2020 Bloomreach
 
   Licensed under the Apache License, Version 2.0 (the  "License");
   you may not use this file except in compliance with the License.
@@ -17,8 +17,6 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-
-
 <!--
 
   Checkstyle configuration that checks the sun coding conventions from:

@@ -21,13 +21,13 @@
     <section name="How to install the IFrame Perspective Plugin">
 
       <div class="alert alert-warning">
-        Follow <a href="install_v13.html">How to install the IFrame Perspective Plugin in Bloomreach Experience Manager v13 or earlier version</a>
-        to install this plugin in brXM v13 or earlier version.
+        Note: to install this plugin in <b>Bloomreach Experience Manager 13 or earlier</b>, follow
+        <a href="install_v13.html">How to install in brXM 13 or earlier</a> page.
       </div>
 
       <subsection name="Prerequisites">
         <p>
-          These instruction assumes that you have maven 3 based build for your site.
+          These instruction assumes that you have Maven based build for your project.
         </p>
       </subsection>
 
@@ -37,7 +37,7 @@
           <source><![CDATA[
     <repository>
       <id>hippo-forge</id>
-      <name>Bloomreach Forge maven 2 repository.</name>
+      <name>Bloomreach Forge Maven 2 repository.</name>
       <url>https://maven.onehippo.com/maven2-forge/</url>
       <snapshots>
         <enabled>false</enabled>
@@ -55,26 +55,16 @@
         <p>In the main <code>pom.xml</code> of the project, in the properties section, add this property. For the correct version number, check the <a href="release-notes.html">Release Notes</a> page.</p>
         <div class="brush: xml">
           <source><![CDATA[
-    <bloomreach.forge.iframeperspectiv.version>version.number</bloomreach.forge.iframeperspective.version>
+    <bloomreach.forge.iframeperspective.version>version.number</bloomreach.forge.iframeperspective.version>
         ]]></source>
         </div>
       </subsection>
 
       <subsection name="Maven Dependency">
         <p>Make sure you have the dependency definition in the root pom.xml of your project:</p>
-        <div class="brush: xml">
         <source><![CDATA[
-<!-- SNIP -->
-
 <dependencyManagement>
-
-  <!-- SNIP -->
-
   <dependencies>
-
-    <!-- SNIP -->
-
-    <!-- NOTE: You should set a property named 'bloomreach.forge.iframeperspective.version' to a version of this plugin! -->
 
     <dependency>
       <groupId>org.bloomreach.forge.iframeperspective</groupId>
@@ -82,49 +72,31 @@
       <version>${bloomreach.forge.iframeperspective.version}</version>
     </dependency>
 
-    <!-- SNIP -->
-
   </dependencies>
-
-  <!-- SNIP -->
-
 </dependencyManagement>
         ]]></source>
-        </div>
         <p>
-          Add the following dependency to either <code>cms-dependencies/pom.xml</code> in Hippo CMS v13
-          or <code>cms/pom.xml</code> in the earlier versions:
+          Add the following dependency to either <code>cms-dependencies/pom.xml</code>
+          or <code>cms/pom.xml</code> in the earlier versions that don't have that:
         </p>
-        <div class="brush: xml">
         <source><![CDATA[
-  <!-- SNIP -->
-
   <dependencies>
-
-    <!-- SNIP -->
 
     <dependency>
       <groupId>org.bloomreach.forge.iframeperspective</groupId>
       <artifactId>iframeperspective</artifactId>
     </dependency>
 
-    <!-- SNIP -->
-
   </dependencies>
         ]]></source>
-        </div>
       </subsection>
 
       <subsection name="Add the plugin configuration to the repository">
-
         <p>
-          If you want to add IFrame based perspective configurations, you need to add configuration nodes (e.g, <code>example-iframe-perspective</code>)
-          into the <code>/hippo:configuration/hippo:frontend/cms/cms-static/</code> node in the repository.
-          In the following example, for demonstration purpose, two IFrame based perspectives were added:
-          One is 'example-iframe-perspective' and the other is 'example-iframe-perspective-second'.
+          To add an IFrame based perspective configuration, add configuration nodes to the
+          <code>/hippo:configuration/hippo:frontend/cms/cms-static/</code> node in the repository.
+          In the following example two IFrame based perspectives are added.
         </p>
-
-        <div class="brush: plain">
         <source><![CDATA[
 definitions:
   config:
@@ -146,17 +118,14 @@ definitions:
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/iframe-perspective/
         ]]></source>
-        </div>
 
         <p>
-          <em>Note:</em> Each perspective must have unique, mandatory <code>frontend:appPath</code> configurations like the above example.
-          See the
-          <a href="https://documentation.bloomreach.com/14/library/concepts/editor-interface/cms-perspectives.html">Create a Custom Perspective</a>
-          page for further detail.
+          <em>Note:</em> each perspective must have unique, mandatory <code>frontend:appPath</code> property. See also
+          <a href="https://documentation.bloomreach.com/library/concepts/editor-interface/cms-perspectives.html">Create a Custom Perspective</a>
+          page for more detail.
         </p>
-
         <p>
-          <em>Note:</em> Also, note that the CMS UI does not support multiple custom perspective plugin configurations
+          <em>Note:</em> the CMS UI does not support multiple custom perspective plugin configurations
           with the same <code>plugin.class</code> property value. That's why the second example shown above is set to use
           <code>org.bloomreach.forge.iframeperspective.IFramePerspective2</code> instead.
           For convenience, this project provides 9 different class names for the same feature
@@ -169,8 +138,6 @@ definitions:
           Also, the translation key-value pairs for each perspective must be added to <code>/hippo:configuration/hippo:translations/hippo:navigation/navigationitem</code>
           like the following example:
         </p>
-
-        <div class="brush: plain">
         <source><![CDATA[
 definitions:
   config:
@@ -178,12 +145,11 @@ definitions:
       example-iframe-perspective: Example IFrame Perspective
       example-iframe-perspective-second: Example IFrame Perspective 2nd
         ]]></source>
-        </div>
 
         <p>
           <em>Note:</em> The translation keys must be the same as the <code>frontend:appPath</code> property values.
           See the
-          <a href="https://documentation.bloomreach.com/14/library/concepts/editor-interface/cms-perspectives.html">Create a Custom Perspective</a>
+          <a href="https://documentation.bloomreach.com/library/concepts/editor-interface/cms-perspectives.html">Create a Custom Perspective</a>
           page for further detail.
         </p>
 
@@ -199,13 +165,13 @@ definitions:
           </tr>
           <tr>
             <td>iframe.src</td>
-            <td>http://www.onehippo.org</td>
+            <td>http://documentation.bloomreach.org</td>
             <td></td>
             <td>The initial source of the IFrame element</td>
           </tr>
           <tr>
             <td>x-frame-options</td>
-            <td>ALLOW-FROM http://www.example.org</td>
+            <td>SAMEORIGIN</td>
             <td></td>
             <td>
               Optionally set <strong>X-Frame-Options</strong> response header if configured.

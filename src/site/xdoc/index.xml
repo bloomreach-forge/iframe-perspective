@@ -21,13 +21,16 @@
     <section name="Introduction">
       <subsection name="What is the IFrame Perspective Plugin?">
         <p>
-          The IFrame Perspective Plugin privides an IFrame based CMS Perspective Plugin, with keeping the navigation states of the IFrame element.
+          The IFrame Perspective Plugin provides an IFrame based CMS Perspective, with keeping the navigation
+          states of the IFrame element. See also at
+          <a href="https://documentation.bloomreach.com/library/concepts/editor-interface/cms-perspectives.html">Create a Custom Perspective</a>
+          documentation.
         </p>
       </subsection>
       <subsection name="Security Considerations">
         <p>
-          By default, Hippo CMS web application doesn't allow to navigate a URL from a different origin
-          in the <strong>iframeperspective</strong> plugin.
+          By default, the Bloomreach Experience Manager application doesn't allow to navigate a URL from a different
+          origin in the <strong>iframeperspective</strong> plugin.
         </p>
         <p>
           If you want to allow some specific known sites to be navigated in the plugin,
