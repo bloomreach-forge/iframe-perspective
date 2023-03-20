@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright 2011-2020 Hippo
+  Copyright 2023 Bloomreach, Inc.
 
   Licensed under the Apache License, Version 2.0 (the  "License");
   you may not use this file except in compliance with the License.
@@ -146,36 +146,6 @@
           </plugin>
         </plugins>
       </build>
-    </profile>
-    <profile>
-      <id>cargo.run</id>
-      <dependencies>
-        <dependency>
-          <groupId>jakarta.xml.bind</groupId>
-          <artifactId>jakarta.xml.bind-api</artifactId>
-          <scope>compile</scope>
-        </dependency>
-        <dependency>
-          <groupId>jakarta.xml.ws</groupId>
-          <artifactId>jakarta.xml.ws-api</artifactId>
-          <scope>compile</scope>
-        </dependency>
-        <dependency>
-          <groupId>javax.annotation</groupId>
-          <artifactId>javax.annotation-api</artifactId>
-          <scope>compile</scope>
-        </dependency>
-        <dependency>
-          <groupId>jakarta.activation</groupId>
-          <artifactId>jakarta.activation-api</artifactId>
-          <scope>runtime</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.glassfish.jaxb</groupId>
-          <artifactId>jaxb-runtime</artifactId>
-          <scope>runtime</scope>
-        </dependency>
-      </dependencies>
     </profile>
     <profile>
       <id>dist</id>
