@@ -227,6 +227,20 @@ definitions:
           </tr>
         </table>
       </subsection>
+      <subsection name="Add another value to the existing frame-src property">
+        <p>
+          Add another value i.e. "bloomreach-forge.github.io" to the frame-src property of the
+          <code>/hippo:configuration/hippo:modules/application-settings/hippo:moduleconfig/content-security-policy</code> node in the repository.
+        </p>
+        <source><![CDATA[
+definitions:
+  config:
+    /hippo:configuration/hippo:modules/application-settings/hippo:moduleconfig/content-security-policy:
+      frame-src:
+        operation: add
+        value: [bloomreach-forge.github.io]
+        ]]></source>
+      </subsection>
 
     </section>
   </body>
