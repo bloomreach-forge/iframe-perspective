@@ -1,0 +1,6 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:modules/application-settings/hippo:moduleconfig/content-security-policy:
+      frame-src:
+        operation: add
+        value: [bloomreach-forge.github.io]

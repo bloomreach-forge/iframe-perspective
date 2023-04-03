@@ -25,6 +25,10 @@
           <th>Bloomreach XM version</th>
         </tr>
         <tr>
+          <td>6.x</td>
+          <td>15.x</td>
+        </tr>
+        <tr>
           <td>5.x</td>
           <td>14.x</td>
         </tr>
@@ -47,6 +51,16 @@
       </table>
     </section>
     <section name="Release Notes">
+      <subsection name="6.0.0">
+        <p class="smallinfo">Release date: 3 April 2023</p>
+        <ul>
+          <li><a href='https://issues.onehippo.com/browse/FORGE-433'>FORGE-433</a><br/>
+            Upgrade for compatibility with Experience Manager 15.<br/>
+            There are changes in the Maven coordinates, in the main perspective class name and in the way it is
+            configured. When upgrading, please do revisit <a href="install.html">the installation page</a>.
+          </li>
+        </ul>
+      </subsection>
       <subsection name="5.0.0">
         <p class="smallinfo">Release date: 6 May 2020</p>
         <ul>
