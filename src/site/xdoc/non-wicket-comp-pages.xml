@@ -12,7 +12,7 @@
     specific language governing permissions and limitations under the License.
   -->
 <!DOCTYPE document PUBLIC "-//Apache Software Foundation//DTD XDOC 1.0//EN"
-  "http://maven.apache.org/dtd/xdoc_1_0.dtd">
+  "https://maven.apache.org/dtd/xdoc_1_0.dtd">
 <document>
   <properties>
     <title>How to build secure non-Wicket-component based pages?</title>
