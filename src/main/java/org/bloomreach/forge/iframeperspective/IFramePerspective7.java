@@ -1,5 +1,5 @@
 /*
- *  Copyright 2023 Bloomreach, Inc.
+ *  Copyright 2024 Bloomreach, Inc.
  * 
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -22,7 +22,6 @@ import org.hippoecm.frontend.plugin.config.IPluginConfig;
  * Convenient class providing the same functionality as {@link IFramePerspective} when configuring the
  * seventh {@link IFramePerspective} based extension perspective only through configuration.
  */
-@SuppressWarnings("serial")
 public class IFramePerspective7 extends IFramePerspective {
 
     public IFramePerspective7(IPluginContext context, IPluginConfig config) {
