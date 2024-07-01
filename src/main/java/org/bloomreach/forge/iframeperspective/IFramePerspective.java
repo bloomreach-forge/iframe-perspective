@@ -1,5 +1,5 @@
 /*
- *  Copyright 2008-2020 Bloomreach, Inc. (https://www.bloomreach.com).
+ *  Copyright 2024 Bloomreach, Inc. (https://www.bloomreach.com).
  * 
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -37,7 +37,6 @@ import org.hippoecm.frontend.plugins.standards.perspective.Perspective;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings("serial")
 public class IFramePerspective extends Perspective {
 
     private static Logger log = LoggerFactory.getLogger(IFramePerspective.class);

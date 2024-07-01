@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Copyright 2023 Bloomreach, Inc.
+  Copyright 2024 Bloomreach, Inc.
 
   Licensed under the Apache License, Version 2.0 (the  "License");
   you may not use this file except in compliance with the License.
@@ -20,22 +20,18 @@
   <parent>
     <groupId>org.onehippo.cms7</groupId>
     <artifactId>hippo-cms7-project</artifactId>
-    <version>15.0.0</version>
+    <version>16.0.0</version>
   </parent>
 
   <name>Bloomreach Forge IFramePerspective Plugin</name>
   <description>Bloomreach Forge IFramePerspective Plugin</description>
   <groupId>org.bloomreach.forge.iframeperspective</groupId>
   <artifactId>iframeperspective</artifactId>
-  <version>6.0.0</version>
+  <version>6.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <url>https://bloomreach-forge.github.io/iframe-perspective/</url>
 
   <properties>
-
-    <hippo.cms.version>15.0.0</hippo.cms.version>
-    <plugin.site.version>3.9.1</plugin.site.version>
-
   </properties>
 
   <licenses>
@@ -47,17 +43,6 @@
   </licenses>
 
   <developers>
-    <developer>
-      <name>Woonsan Ko</name>
-      <id>wko</id>
-      <email>woonsan.ko @ bloomreach . com</email>
-      <organization>Bloomreach</organization>
-      <roles>
-        <role>Project Lead</role>
-        <role>Java Developer</role>
-      </roles>
-      <timezone>-5</timezone>
-    </developer>
     <developer>
       <name>Jeroen Hoffman</name>
       <id>wko</id>
@@ -79,13 +64,13 @@
 
   <issueManagement>
     <system>Jira</system>
-    <url>https://issues.onehippo.com/browse/HIPFORGE</url>
+    <url>https://issues.onehippo.com/browse/FORGE</url>
   </issueManagement>
 
   <distributionManagement>
     <repository>
-      <name>Hippo Maven 2 Forge Repository</name>
-      <id>hippo-maven2-forge</id>
+      <name>Bloomreach Maven 2 Forge Repository</name>
+      <id>bloomreach-maven2-forge</id>
       <url>https://maven.bloomreach.com/content/repositories/forge-releases/</url>
       <uniqueVersion>false</uniqueVersion>
     </repository>
@@ -93,14 +78,14 @@
 
   <repositories>
     <repository>
-      <id>hippo</id>
-      <name>Hippo maven 2 repository.</name>
-      <url>https://maven.bloomreach.com/maven2/</url>
+      <id>bloomreach-maven2</id>
+      <name>Bloomreach maven 2 repository.</name>
+      <url>https://maven.bloomreach.com/repository/maven2/</url>
     </repository>
     <repository>
-      <id>hippo-maven2-forge</id>
-      <name>Hippo Maven 2 Forge repository</name>
-      <url>https://maven.bloomreach.com/maven2-forge/</url>
+      <id>bloomreach-maven2-forge</id>
+      <name>Bloomreach Maven 2 Forge repository</name>
+      <url>https://maven.bloomreach.com/repository/maven2-forge/</url>
       <snapshots />
     </repository>
   </repositories>
@@ -110,7 +95,7 @@
     <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-cms-api</artifactId>
-      <version>${hippo.cms.version}</version>
+      <version>${hippo.release.version}</version>
       <scope>provided</scope>
       <exclusions>
         <!-- Exclude this since it makes errors in project-info report generation. -->
@@ -139,7 +124,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-site-plugin</artifactId>
-            <version>${plugin.site.version}</version>
+            <version>${maven.plugin.site.version}</version>
             <configuration>
               <outputDirectory>docs</outputDirectory>
             </configuration>
