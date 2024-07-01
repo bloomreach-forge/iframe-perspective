@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-    Copyright 2010-2020 Bloomreach Inc.
+    Copyright 2024 Bloomreach Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
     the License. You may obtain a copy of the License at
@@ -36,9 +36,9 @@
         <div class="brush: xml">
           <source><![CDATA[
     <repository>
-      <id>hippo-forge</id>
+      <id>bloomreach-forge</id>
       <name>Bloomreach Forge Maven 2 repository.</name>
-      <url>https://maven.onehippo.com/maven2-forge/</url>
+      <url>https://maven.bloomreach.com/repository/maven2-forge/</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
