@@ -56,12 +56,11 @@
     </section>
     <section name="Release Notes">
       <subsection name="7.0.0">
-        <p class="smallinfo">Release date: X June 2024</p>
+        <p class="smallinfo">Release date: 1 July 2024</p>
         <ul>
           <li><a href='https://issues.onehippo.com/browse/FORGE-537'>FORGE-537</a><br/>
             Upgrade for compatibility with Experience Manager 16.<br/>
-            There are changes in the Maven coordinates, in the main perspective class name and in the way it is
-            configured. When upgrading, please do revisit <a href="install.html">the installation page</a>.
+            There are changes in the Maven coordinates. When upgrading, please do revisit <a href="install.html">the installation page</a>.
           </li>
         </ul>
       </subsection>

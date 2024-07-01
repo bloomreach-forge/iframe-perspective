@@ -36,9 +36,9 @@
         <div class="brush: xml">
           <source><![CDATA[
     <repository>
-      <id>hippo-forge</id>
+      <id>bloomreach-forge</id>
       <name>Bloomreach Forge Maven 2 repository.</name>
-      <url>https://maven.onehippo.com/maven2-forge/</url>
+      <url>https://maven.bloomreach.com/repository/maven2-forge/</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
