@@ -20,14 +20,14 @@
   <parent>
     <groupId>org.onehippo.cms7</groupId>
     <artifactId>hippo-cms7-project</artifactId>
-    <version>16.0.0</version>
+    <version>17.0.0</version>
   </parent>
 
   <name>Bloomreach Forge IFramePerspective Plugin</name>
   <description>Bloomreach Forge IFramePerspective Plugin</description>
   <groupId>org.bloomreach.forge.iframeperspective</groupId>
   <artifactId>iframeperspective</artifactId>
-  <version>7.0.1-SNAPSHOT</version>
+  <version>8.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <url>https://bloomreach-forge.github.io/iframe-perspective/</url>
 
@@ -64,7 +64,7 @@
 
   <issueManagement>
     <system>Jira</system>
-    <url>https://issues.onehippo.com/browse/FORGE</url>
+    <url>https://bloomreach.atlassian.net/browse/FORGE</url>
   </issueManagement>
 
   <distributionManagement>
@@ -146,8 +146,8 @@
           <scope>provided</scope>
         </dependency>
         <dependency>
-          <groupId>javax.annotation</groupId>
-          <artifactId>javax.annotation-api</artifactId>
+          <groupId>jakarta.annotation</groupId>
+          <artifactId>jakarta.annotation-api</artifactId>
           <scope>provided</scope>
         </dependency>
         <dependency>
