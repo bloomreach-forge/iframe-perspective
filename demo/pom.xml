@@ -5,14 +5,14 @@
   <parent>
     <groupId>org.onehippo.cms7</groupId>
     <artifactId>hippo-cms7-release</artifactId>
-    <version>16.0.0</version>
+    <version>17.0.0</version>
   </parent>
 
   <name>IFrame Perspective Plugin Demo</name>
   <description>IFrame Perspective Plugin Demo</description>
   <groupId>org.bloomreach.forge.iframeperspective</groupId>
   <artifactId>iframeperspective-demo</artifactId>
-  <version>7.0.1-SNAPSHOT</version>
+  <version>8.0.0</version>
   <packaging>pom</packaging>
 
   <!-- 
@@ -65,7 +65,7 @@
 
     <forge.iframeperspective.version>${project.version}</forge.iframeperspective.version>
 
-    <essentials.version>16.0.0</essentials.version>
+    <essentials.version>17.0.0</essentials.version>
 
     <development-module-deploy-dir>shared/lib</development-module-deploy-dir>
 
