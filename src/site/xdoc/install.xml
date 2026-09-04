@@ -117,6 +117,15 @@ definitions:
         plugin.class: org.bloomreach.forge.iframeperspective.IFramePerspective2
         wicket.id: service.tab
         iframe.src: https://bloomreach-forge.github.io/iframe-perspective/
+      /example-lazy-iframe-perspective:
+        jcr:primaryType: frontend:plugin
+        jcr:mixinTypes: ['frontend:navigationitem']
+        frontend:appPath: example-lazy-iframe-perspective
+        hipposys:userrole: xm.cms.user
+        plugin.class: org.bloomreach.forge.iframeperspective.LazyIFramePerspective
+        wicket.id: service.tab
+        iframe.src: https://bloomreach-forge.github.io/iframe-perspective/
+        reload-on-activate: false
         ]]></source>
 
         <p>

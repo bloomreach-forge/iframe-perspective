@@ -61,4 +61,13 @@
         }
     };
 
+
+    IFramePerspective.loadIFrame = function(id, src) {
+        var iframe = Wicket.$(id);
+        if (iframe) {
+            iframe.src = src;
+        }
+        IFramePerspective.showIFrame(id);
+    };
+
 })();

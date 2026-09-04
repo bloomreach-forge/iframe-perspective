@@ -73,7 +73,9 @@ public class IFramePerspective extends Perspective {
      */
     private String xWebkitCSP;
 
-    private final WebMarkupContainer iframe;
+    protected final WebMarkupContainer iframe;
+
+    protected String iframeSrc;
 
     public IFramePerspective(IPluginContext context, IPluginConfig config) {
         super(context, config);
@@ -93,12 +95,22 @@ public class IFramePerspective extends Perspective {
                 String attrValue = config.getString(key, null);
 
                 if (attrValue != null) {
-                    iframe.add(new AttributeModifier(attrName, attrValue));
+                    if ("src".equals(attrName)) {
+                        iframeSrc = attrValue;
+                    }
+                    if (shouldAddIframeAttribute(attrName)) {
+                        iframe.add(new AttributeModifier(attrName, attrValue));
+                    }
                 }
             }
         }
 
         add(iframe);
+    }
+
+
+    protected boolean shouldAddIframeAttribute(final String attrName) {
+        return true;
     }
 
     @Override
