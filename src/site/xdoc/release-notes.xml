@@ -97,7 +97,7 @@
       <subsection name="5.0.0">
         <p class="smallinfo">Release date: 6 May 2020</p>
         <ul>
-          <li><a href='https://bloomreach.atlassian.net/browse/HIPFORGE-346'>HIPFORGE-346</a><br/>
+          <li><a href='https://bloomreach.atlassian.net/browse/FORGE-346'>FORGE-346</a><br/>
             Upgrade for compatibility with Experience Manager 14.<br/>
             There are changes in the Maven coordinates, in the main perspective class name and in the way it is
             configured. When upgrading, please do revisit <a href="install.html">the installation page</a>.
@@ -107,7 +107,7 @@
       <subsection name="4.0.1">
         <p class="smallinfo">Release date: 28 May 2019</p>
         <ul>
-          <li><a href='https://bloomreach.atlassian.net/browse/HIPFORGE-285'>HIPFORGE-285</a><br/>
+          <li><a href='https://bloomreach.atlassian.net/browse/FORGE-285'>FORGE-285</a><br/>
             Add possibility to set the plugin title.
           </li>
         </ul>
@@ -115,14 +115,14 @@
       <subsection name="4.0.0">
         <p class="smallinfo">Release date: 19 January 2019</p>
         <ul>
-          <li><a href='https://bloomreach.atlassian.net/browse/HIPFORGE-255'>HIPFORGE-255</a><br/>
+          <li><a href='https://bloomreach.atlassian.net/browse/FORGE-255'>FORGE-255</a><br/>
             Upgrade for compatibility with Experience Manager 13.
           </li>
         </ul>
       </subsection>
       <subsection name="3.0.1">
         <ul>
-          <li><a href='https://bloomreach.atlassian.net/browse/HIPFORGE-194'>HIPFORGE-194</a><br/>
+          <li><a href='https://bloomreach.atlassian.net/browse/FORGE-194'>FORGE-194</a><br/>
             Upgrade demo on the latest 12.x.
           </li>
         </ul>
