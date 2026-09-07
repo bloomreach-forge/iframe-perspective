@@ -1,6 +1,9 @@
 <#include "../include/imports.ftl">
 
 <#-- @ftlvariable name="document" type="org.bloomreach.forge.iframeperspective.demo.beans.NewsDocument" -->
+<script>
+  console.log("News item is loaded", window.location.href);
+</script>
 <#if document??>
   <@hst.link var="link" hippobean=document/>
 <article class="has-edit-button">
