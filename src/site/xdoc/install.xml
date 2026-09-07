@@ -97,6 +97,8 @@
           <code>/hippo:configuration/hippo:frontend/cms/cms-static/</code> node in the repository.
           In the following example two IFrame based perspectives are added.
         </p>
+        <p>Version <strong>8.0.1</strong> introduces lazy-loading option, which loads perspective URL only when perspective is selected (instead of when user logins into the CMS).</p>
+        <p>Version <strong>8.0.1</strong> also introduces a new boolean property called <code>reload-on-activate</code>, which, when set to <code>true</code> reloads Iframe when perspective is selected again.</p>
         <source><![CDATA[
 definitions:
   config:
@@ -136,9 +138,11 @@ definitions:
         <p>
           <em>Note:</em> the CMS UI does not support multiple custom perspective plugin configurations
           with the same <code>plugin.class</code> property value. That's why the second example shown above is set to use
-          <code>org.bloomreach.forge.iframeperspective.IFramePerspective2</code> instead.
+          <code>org.bloomreach.forge.iframeperspective.IFramePerspective2</code> or <code>org.bloomreach.forge.iframeperspective.LazyIFramePerspective2</code> instead.
           For convenience, this project provides 9 different class names for the same feature
-          (<code>org.bloomreach.forge.iframeperspective.IFramePerspective2</code> ~ <code>org.bloomreach.forge.iframeperspective.IFramePerspective10</code>).
+          (<code>org.bloomreach.forge.iframeperspective.IFramePerspective2</code> ~ <code>org.bloomreach.forge.iframeperspective.IFramePerspective10</code> and
+          <code>org.bloomreach.forge.iframeperspective.org.bloomreach.forge.iframeperspective.LazyIFramePerspective2</code> ~ <code>org.bloomreach.forge.iframeperspective.LazyIFramePerspective10</code>
+          ).
           This allows developers to avoid adding a custom class extending <code>org.bloomreach.forge.iframeperspective.IFramePerspective</code>
           in their projects.
         </p>
