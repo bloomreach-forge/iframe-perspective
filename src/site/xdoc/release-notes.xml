@@ -59,6 +59,14 @@
       </table>
     </section>
     <section name="Release Notes">
+      <subsection name="8.0.2">
+        <p class="smallinfo">Release date: 8 September 2026</p>
+        <ul>
+          <li><a href='https://bloomreach.atlassian.net/browse/FORGE-675'>FORGE-675</a><br/>
+            Added possibility to override iframe src(url) method for LazyIFramePerspective<br/>
+          </li>
+        </ul>
+      </subsection>
       <subsection name="8.0.1">
         <p class="smallinfo">Release date: 7 September 2026</p>
         <ul>
