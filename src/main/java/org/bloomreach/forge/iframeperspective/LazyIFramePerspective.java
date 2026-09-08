@@ -48,16 +48,21 @@ public class LazyIFramePerspective extends IFramePerspective {
     public void onActivated() {
         super.onActivated();
 
-        if ((reloadOnActivate || !iframeLoaded) && StringUtils.isNotEmpty(iframeSrc)) {
+        String src = getIframeSrc();
+        if ((reloadOnActivate || !iframeLoaded) && StringUtils.isNotEmpty(src)) {
             iframeLoaded = true;
             final Optional<AjaxRequestTarget> target = RequestCycle.get().find(AjaxRequestTarget.class);
             if (target.isPresent()) {
                 target.get().appendJavaScript(
-                        "IFramePerspective.loadIFrame('" + iframe.getMarkupId() + "', '" + iframeSrc + "');");
+                        "IFramePerspective.loadIFrame('" + iframe.getMarkupId() + "', '" + src + "');");
             } else {
                 log.warn("LazyIFramePerspective.onActivated() was called without an AjaxRequestTarget — " +
-                         "iframe src '{}' could not be injected lazily.", iframeSrc);
+                         "iframe src '{}' could not be injected lazily.", src);
             }
         }
+    }
+
+    protected String getIframeSrc() {
+        return iframeSrc;
     }
 }
