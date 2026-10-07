@@ -59,6 +59,14 @@
       </table>
     </section>
     <section name="Release Notes">
+      <subsection name="8.0.4">
+        <p class="smallinfo">Release date: 7 October 2026</p>
+        <ul>
+          <li><a href='https://bloomreach.atlassian.net/browse/FORGE-677'>FORGE-677</a><br/>
+            Fix header addition (regression fix)<br/>
+          </li>
+        </ul>
+      </subsection>
       <subsection name="8.0.3">
         <p class="smallinfo">Release date: 7 October 2026</p>
         <ul>
