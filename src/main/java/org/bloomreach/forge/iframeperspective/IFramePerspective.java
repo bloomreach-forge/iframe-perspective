@@ -15,6 +15,7 @@
  */
 package org.bloomreach.forge.iframeperspective;
 
+import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 
 import org.apache.wicket.AttributeModifier;
@@ -23,14 +24,11 @@ import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.markup.head.OnDomReadyHeaderItem;
 import org.apache.wicket.markup.html.WebMarkupContainer;
-import org.apache.wicket.request.Response;
 import org.apache.wicket.request.cycle.RequestCycle;
-import org.apache.wicket.request.http.WebResponse;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.JavaScriptResourceReference;
 import org.apache.wicket.request.resource.ResourceReference;
 
-import org.apache.wicket.response.StringResponse;
 import org.hippoecm.frontend.plugin.IPluginContext;
 import org.hippoecm.frontend.plugin.config.IPluginConfig;
 import org.hippoecm.frontend.plugins.standards.perspective.Perspective;
@@ -115,26 +113,31 @@ public class IFramePerspective extends Perspective {
     }
 
     @Override
-    protected void onRender() {
-        super.onRender();
+    protected void onConfigure() {
+        super.onConfigure();
+        setResponseHeaders();
+    }
 
-        Response response = RequestCycle.get().getResponse();
-        
-        if (response instanceof WebResponse) {
+    private void setResponseHeaders() {
+        final RequestCycle requestCycle = RequestCycle.get();
+        final Object containerResponse = requestCycle.getResponse().getContainerResponse();
+
+        if (containerResponse instanceof HttpServletResponse response) {
+
             if (StringUtils.isNotEmpty(xFrameOptions)) {
-                ((WebResponse) response).setHeader("X-Frame-Options", xFrameOptions);
+                response.setHeader("X-Frame-Options", xFrameOptions);
             }
 
             if (StringUtils.isNotEmpty(contentSecurityPolicy)) {
-                ((WebResponse) response).setHeader("Content-Security-Policy", contentSecurityPolicy);
+                response.setHeader("Content-Security-Policy", contentSecurityPolicy);
             }
 
             if (StringUtils.isNotEmpty(xContentSecurityPolicy)) {
-                ((WebResponse) response).setHeader("X-Content-Security-Policy", xContentSecurityPolicy);
+                response.setHeader("X-Content-Security-Policy", xContentSecurityPolicy);
             }
 
             if (StringUtils.isNotEmpty(xWebkitCSP)) {
-                ((WebResponse) response).setHeader("X-Webkit-CSP", xWebkitCSP);
+                response.setHeader("X-Webkit-CSP", xWebkitCSP);
             }
         }
     }
