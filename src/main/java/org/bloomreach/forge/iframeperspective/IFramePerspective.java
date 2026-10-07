@@ -30,6 +30,7 @@ import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.JavaScriptResourceReference;
 import org.apache.wicket.request.resource.ResourceReference;
 
+import org.apache.wicket.response.StringResponse;
 import org.hippoecm.frontend.plugin.IPluginContext;
 import org.hippoecm.frontend.plugin.config.IPluginConfig;
 import org.hippoecm.frontend.plugins.standards.perspective.Perspective;
@@ -118,7 +119,7 @@ public class IFramePerspective extends Perspective {
         super.onRender();
 
         Response response = RequestCycle.get().getResponse();
-
+        
         if (response instanceof WebResponse) {
             if (StringUtils.isNotEmpty(xFrameOptions)) {
                 ((WebResponse) response).setHeader("X-Frame-Options", xFrameOptions);
@@ -135,8 +136,6 @@ public class IFramePerspective extends Perspective {
             if (StringUtils.isNotEmpty(xWebkitCSP)) {
                 ((WebResponse) response).setHeader("X-Webkit-CSP", xWebkitCSP);
             }
-        } else {
-            log.error("Failed to write response headers because response is not WebResponse: {}", response);
         }
     }
 
